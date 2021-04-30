@@ -1,7 +1,7 @@
 {
     "chains": [
         {
-            "endpoint": "https://rinkeby.infura.io/v3/f165a9673b4248d0a3854934717f1f21",
+            "endpoint": "",
             "from": "",
             "id": "0",
             "type": "ethereum",
@@ -34,5 +34,12 @@
     "factories": [
         "0xA7c677dE9D21Bd9aF8776e4d0527C7ff4Ce6214B",
         "0x06D71c8002b0ee2788198a806e66A7605D6e1c27"
-    ]
+    ],
+    "resources": {
+        "JHKToken": {
+            "0":"0x2cdb778f20b4b455cd414718ffe960ae37353b41",
+            "1":"0x148319a3a9c5828b52ebb4e00e5bbad2be3da223",
+            "resourceId":"0x0000000000000000000000514910771af9ca656af840dff83e8264ecf986ca01"
+        }
+    }
 }
