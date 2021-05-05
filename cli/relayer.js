@@ -4,7 +4,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const cfg = require('dotenv').config({ path: path.join(__dirname, '../env') + '/relayer.env' });
 
-exports.startRelayerCmd = new commander.Command("setupRelayer")
+exports.setupRelayer = new commander.Command("setupRelayer")
     .description("Start a relayer")
     .action(async function(args) {
 

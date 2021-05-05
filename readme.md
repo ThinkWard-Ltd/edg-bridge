@@ -87,8 +87,33 @@ KEYSTORE_PASSWORD=
 Copmplete setting up the relayer config using setup relayer section and run ```yarn start-relayer```.
 
 ## Install Service
-Copmplete setting up the relayer config using setup relayer section and run ```yarn install-service```.
+Complete setting up the relayer config using setup relayer section and run ```yarn install-service```.
 
+## Mintable Token deployment
+1. To deploy a mintable token on the destination side of the bridge, create a file called ```factory``` and set the following
+variables in it
+```bash
+RPC_URL=
+CHAIN_ID=
+PRIVATE_KEY=
+FACTORY_ADDRESS=
+TOKEN_NAME=
+TOKEN_SYMBOL=
+TOKEN_DECIMALS=
+MULTISIG_ADDRESS=
+```
+2. run the command ```set -a;. factory;set +a
+3. run the command
+```bash
+node index.js createToken --rpcUrl $RPC_URL /
+--privateKey $CHAIN_ID /
+--factoryAddress $FACTORY_ADDRESS /
+--chainId $CHAIN_ID /
+--tokenName $TOKEN_NAME /
+--tokenSymbol $TOKEN_SYMBOL /
+--tokenDecimals $TOKEN_DECIMALS /
+--multiSigAddress $MULTISIG_ADDRESS /
+```
 ##  Token Transfers
 
 To execute a transfer on either side of the bridge two calls are required.

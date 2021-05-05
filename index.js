@@ -1,14 +1,13 @@
 const commander = require('commander');
-// import { admin } from './cmd/admin';
-// import { deployBridge } from './cmd/deployBridge';
+
 const { deployBridge } = require('./cli/deployBridge');
-const { startRelayerCmd } = require('./cli/relayer');
-// import { relayer } from './cmd/relayer';
+const { setupRelayer } = require('./cli/relayer');
+const { createToken } = require('./cli/erc20Factory');
 
 let program = new commander.Command();
+program.addCommand(createToken);
 program.addCommand(deployBridge);
-program.addCommand(startRelayerCmd);
-// program.addCommand(admin);
+program.addCommand(setupRelayer);
 
 program.allowUnknownOption(false);
 
