@@ -102,7 +102,7 @@ TOKEN_SYMBOL=
 TOKEN_DECIMALS=
 MULTISIG_ADDRESS=
 ```
-2. run the command ```set -a;. factory;set +a```
+2. Run ```set -a;. factory;set +a```
 3. Finally
 ```bash
 node index.js createToken --rpcUrl $RPC_URL /
@@ -112,8 +112,11 @@ node index.js createToken --rpcUrl $RPC_URL /
 --tokenName $TOKEN_NAME /
 --tokenSymbol $TOKEN_SYMBOL /
 --tokenDecimals $TOKEN_DECIMALS /
---multiSigAddress $MULTISIG_ADDRESS /
+--multiSigAddress $MULTISIG_ADDRESS
 ```
+
+This will create a mintable token using the private key provided and assign its ownership to
+multi sig address.
 ##  Token Transfers
 
 To execute a transfer on either side of the bridge two calls are required.
