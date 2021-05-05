@@ -102,8 +102,8 @@ TOKEN_SYMBOL=
 TOKEN_DECIMALS=
 MULTISIG_ADDRESS=
 ```
-2. run the command ```set -a;. factory;set +a
-3. run the command
+2. run the command ```set -a;. factory;set +a```
+3. Finally
 ```bash
 node index.js createToken --rpcUrl $RPC_URL /
 --privateKey $CHAIN_ID /
