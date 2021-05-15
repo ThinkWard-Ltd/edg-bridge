@@ -105,14 +105,7 @@ MULTISIG_ADDRESS=
 2. Run ```set -a;. factory;set +a```
 3. Finally
 ```bash
-node index.js createToken --rpcUrl $RPC_URL /
---privateKey $CHAIN_ID /
---factoryAddress $FACTORY_ADDRESS /
---chainId $CHAIN_ID /
---tokenName $TOKEN_NAME /
---tokenSymbol $TOKEN_SYMBOL /
---tokenDecimals $TOKEN_DECIMALS /
---multiSigAddress $MULTISIG_ADDRESS
+node index.js createToken --rpcUrl $RPC_URL --privateKey $PRIVATE_KEY --factoryAddress $FACTORY_ADDRESS --chainId $CHAIN_ID --tokenName $TOKEN_NAME --tokenSymbol $TOKEN_SYMBOL --tokenDecimals $TOKEN_DECIMALS --multiSigAddress $MULTISIG_ADDRESS
 ```
 
 This will create a mintable token using the private key provided and assign its ownership to
