@@ -1,6 +1,7 @@
 const ethers = require('ethers');
 const fs = require('fs');
 const solc = require('solc');
+const path = require('path');
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -59,4 +60,32 @@ function getContents(fileName) {
     } catch (err) {
         return { error: 'File not found!' };
     }
+}
+
+exports.createChainConfig = function (chainName, chainId, bridgeAddress, erc20handlerAddress, gasLimit = 8000000, gasPrice = 100000000000, endpoint = '', relayerAddress = '') {
+    let chainConfig = {
+        endpoint,
+        from: relayerAddress,
+        id: chainId,
+        type: "ethereum",
+        name: chainName,
+        opts: {
+            bridge: bridgeAddress,
+            erc20Handler: erc20handlerAddress,
+            genericHandler: erc20handlerAddress,
+            gasLimit: gasLimit.toString(),
+            maxGasPrice: gasPrice.toString()
+        }
+    }
+
+    if (endpoint.length && endpoint.startsWith('http')) chainConfig.opts['http'] = 'true';
+    return chainConfig;
+}
+
+exports.publishChainConfiguration = function (chainConfig) {
+    let publishPath = path.join(__dirname, './publish/');
+    if (!fs.existsSync(publishPath)) fs.mkdirSync(publishPath);
+    let fileName = `bridge-${chainConfig.name}-${Date.now()}.json`;
+    fs.writeFileSync(publishPath + fileName, JSON.stringify(chainConfig), 'utf-8');
+    return fileName;
 }

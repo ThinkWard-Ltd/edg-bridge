@@ -1,0 +1,61 @@
+{
+    "chains": [
+        {
+            "endpoint": "",
+            "from": "",
+            "id": "0",
+            "type": "ethereum",
+            "name": "Goerli",
+            "opts": {
+                "bridge": "0xC7DfDEeC0b91D77B6723988C143647A420056911",
+                "erc20Handler": "0xC015A56e95a715A03828Cb61913590107d5d1d89",
+                "genericHandler": "0xC015A56e95a715A03828Cb61913590107d5d1d89",
+                "gasLimit": "8000000",
+                "maxGasPrice": "100000000000",
+                "http": "true"
+            }
+        },
+        {
+            "endpoint": "http://127.0.0.1:9933",
+            "from": "",
+            "id": "1",
+            "type": "ethereum",
+            "name": "Beresheet",
+            "opts": {
+                "bridge": "0x73b647cbA2FE75Ba05B8e12ef8F8D6327D6367bF",
+                "erc20Handler": "0x7d73424a8256C0b2BA245e5d5a3De8820E45F390",
+                "genericHandler": "0x7d73424a8256C0b2BA245e5d5a3De8820E45F390",
+                "gasLimit": "8000000",
+                "maxGasPrice": "100000000000",
+                "http": "true"
+            }
+        },
+        {
+            "endpoint": "http://beresheet1.edgewa.re:9933",
+            "from": "",
+            "id": "2",
+            "type": "ethereum",
+            "name": "Beresheet",
+            "opts": {
+                "bridge": "0x41CA1a82Eba1D9EaF01A36406708b3EF219098a7",
+                "erc20Handler": "0x60B4E6b5Cd505D7Df2E4ee5d5B89aD081539fC44",
+                "genericHandler": "0x60B4E6b5Cd505D7Df2E4ee5d5B89aD081539fC44",
+                "gasLimit": "8000000",
+                "maxGasPrice": "100000000000",
+                "http": "true"
+            }
+        }
+    ],
+    "factories": [
+        "0x13E6067d68B1B3886277259Ad9A9E542b92EC314",
+        "0x08425D9Df219f93d5763c3e85204cb5B4cE33aAa",
+        "0xb05132a64B0052872807e5656245E84D58026099"
+    ],
+    "resources": {
+        "0x0000000000000000000000514910771af9ca656af840dff83e8264ecf986ca00": {
+            "0":"0x76D60f8eC8a1A7adccE74915394644C589fB12f6",
+            "1":"0xa826ba8fa8998e324757c6bcb544f0cdba3eb4ab",
+            "2":"0xd3b59ced0ce1e8ecd3f0c2301603021382c88366"
+        }
+    }
+}

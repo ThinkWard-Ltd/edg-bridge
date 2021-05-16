@@ -1,7 +1,7 @@
 const ethers = require("ethers");
 const fs = require('fs');
-const { ContractABIs, GAS_PRICE, GAS_LIMIT, DEST_CHAIN_DEFAULT_ID, SRC_CHAIN_DEFAULT_ID } = require("./constants");
-const { getWalletAndProvider, waitForTx, compileMintableERC20 } = require("./utils");
+const { ContractABIs, GAS_PRICE, GAS_LIMIT } = require("./constants");
+const { getWalletAndProvider, waitForTx } = require("./utils");
 const path = require('path');
 const Command = require('commander');
 
