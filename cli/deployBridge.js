@@ -17,32 +17,25 @@ exports.deployBridge = new commander.Command("deployBridge")
         try {
             console.log(`Deploying chainsafe's chainbridge... `);
 
-            /**
-             * Get providers and
-             * wallets for both chains
-             */
+            // Get providers and wallets for both chains
             let sourceChainProvider, destinationChainProvider,
                 sourceWallet, destinationWallet;
+
             let _res = getWalletAndProvider(process.env.SRC_CHAIN_RPC_HTTPS, process.env.SRC_CHAIN_PRIVATE_KEY, Number(process.env.SRC_CHAIN_NETWORK_ID));
             sourceWallet = _res.chainWallet;
             sourceChainProvider = _res.chainProvider;
+
             _res = getWalletAndProvider(process.env.DEST_CHAIN_RPC_HTTPS, process.env.DEST_CHAIN_PRIVATE_KEY, Number(process.env.DEST_CHAIN_NETWORK_ID));
             destinationWallet = _res.chainWallet;
             destinationChainProvider = _res.chainProvider;
 
-            /**
-             * Deployment of main
-             * bridge and handler contracts
-             */
+            // Deployment of main bridge and handler contracts
             const sourceBridgeAddress = await deployBridgeContract(SRC_CHAIN_DEFAULT_ID, [], sourceWallet, undefined, Number(process.env.BRIDGE_TRANSFER_FEE || 0), undefined, SGAS_PRICE, SGAS_LIMIT);
             const sourceHandlerAddress = await deployERC20Handler(sourceBridgeAddress, sourceWallet, SGAS_PRICE, SGAS_LIMIT);
             const destBridgeAddress = await deployBridgeContract(DEST_CHAIN_DEFAULT_ID, [], destinationWallet, undefined, Number(process.env.BRIDGE_TRANSFER_FEE || 0), undefined, DGAS_PRICE, DGAS_LIMIT);
             const destHanderAddress = await deployERC20Handler(destBridgeAddress, destinationWallet, DGAS_PRICE, DGAS_LIMIT);
 
-            /**
-             * Deploy mintable factory
-             * contract
-             */
+            // Deploy mintable factory contract
             const srcMintableCoinFactoryAddress = await deployMintableCoinFactory(sourceWallet, SGAS_PRICE, SGAS_LIMIT);
             const srcCloneableMintableERC20Address = await deployCloneableERC20(sourceWallet, SGAS_PRICE, SGAS_LIMIT);
             const dstMintableCoinFactoryAddress = await deployMintableCoinFactory(destinationWallet, DGAS_PRICE, DGAS_LIMIT);
@@ -86,12 +79,13 @@ exports.deployBridge = new commander.Command("deployBridge")
                 process.env.DEST_CHAIN_RPC_WS.length ? process.env.DEST_CHAIN_RPC_WS : process.env.DEST_CHAIN_RPC_HTTPS,
                 undefined
             )
+
             let relayerConfig = createRelayerConfig(srcBridgeConfig, dstBridgeConfig, srcMintableCoinFactoryAddress, dstMintableCoinFactoryAddress);
             let fileName = publishRelayerConfiguration(relayerConfig);
-
             console.log(`⚙️  ${fileName} created to run as the first relayer!`);
 
         } catch (err) {
-            console.log(err)
+            console.log(err);
+            process.exit(1);
         }
     });
