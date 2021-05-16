@@ -89,3 +89,18 @@ exports.publishChainConfiguration = function (chainConfig) {
     fs.writeFileSync(publishPath + fileName, JSON.stringify(chainConfig), 'utf-8');
     return fileName;
 }
+
+exports.publishRelayerConfiguration = function (relayerConfig) {
+    let publishPath = path.join(__dirname, './publish/');
+    if (!fs.existsSync(publishPath)) fs.mkdirSync(publishPath);
+    let fileName = `bridge-${relayerConfig.chains[0].name}-${relayerConfig.chains[1].name}-${Date.now()}.json`;
+    fs.writeFileSync(publishPath + fileName, JSON.stringify(relayerConfig), 'utf-8');
+    return fileName;
+}
+
+exports.createRelayerConfig = function(chain1Config, chain2Config, srcFactory, destFactory) {
+    return {
+        chains: [chain1Config, chain2Config],
+        factories: [srcFactory, destFactory]
+    }
+}

@@ -25,3 +25,17 @@ exports.revokeGrantERC20Role = async function (cloneableERC20Address, role, revo
         await waitForTx(chainProvider, tx.hash);
     }
 }
+
+exports.registerResource = async function (bridgeAddress, handlerAddress, targetTokenAddress, resourceId, chainProvider, wallet) {
+    const bridgeInstance = new ethers.Contract(bridgeAddress, ContractABIs.Bridge.abi, wallet);
+    const tx = await bridgeInstance.adminSetResource(handlerAddress, resourceId, targetTokenAddress, { gasPrice: GAS_PRICE, gasLimit: GAS_LIMIT });
+    await waitForTx(chainProvider, tx.hash);
+}
+
+exports.renounceBridgeAdmin = async function(bridgeAddress, chainWallet, chainProvider, multiSigAddress, chainName) {
+    let bridgeInstance = new ethers.Contract(bridgeAddress, ContractABIs.Bridge.abi, chainWallet);
+
+    let tx = await bridgeInstance.renounceAdmin(multiSigAddress);
+    await waitForTx(chainProvider, tx.hash);
+    console.log(`Transferred ${chainName} bridge ownership to ${multiSigAddress}`);
+}
