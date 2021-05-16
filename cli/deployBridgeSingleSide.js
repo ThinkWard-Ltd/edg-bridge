@@ -1,11 +1,9 @@
 const commander = require('commander');
 const path = require('path');
-const ethers = require("ethers");
 
-const { ContractABIs } = require("../constants");
 const { deployBridgeContract, deployERC20Handler, deployMintableCoinFactory, deployCloneableERC20 } = require('../deployers');
-const { setCloneableCoinAddress, revokeGrantERC20Role } = require('../interactions');
-const { getWalletAndProvider, waitForTx, createChainConfig, publishChainConfiguration } = require("../utils");
+const { setCloneableCoinAddress, revokeGrantERC20Role, renounceBridgeAdmin } = require('../interactions');
+const { getWalletAndProvider, createChainConfig, publishChainConfiguration } = require("../utils");
 
 require('dotenv').config({ path: path.join(__dirname, '../env/deployBridgeSingleSide.env') });
 const GAS_LIMIT = Number(process.env.GAS_LIMIT);
@@ -17,26 +15,17 @@ exports.deployBridgeSingleSide = new commander.Command("deployBridgeSingleSide")
         try {
             console.log(`Deploying chainsafe's chainbridge... `);
 
-            /**
-             * Get providers and
-             * wallets for both chains
-             */
+            // Get providers and wallets for both chains
             let chainProvider, chainWallet;
             let _res = getWalletAndProvider(process.env.CHAIN_RPC, process.env.PRIVATE_KEY, Number(process.env.ETH_CHAIN_ID));
             chainWallet = _res.chainWallet;
             chainProvider = _res.chainProvider;
 
-            /**
-             * Deployment of main
-             * bridge and handler contracts
-             */
+            // Deployment of main bridge and handler contracts
             const deployedBridgeContractAddress = await deployBridgeContract(CHAINBRIDGE_CHAIN_ID, [], chainWallet, undefined, Number(process.env.BRIDGE_TRANSFER_FEE || 0), undefined, GAS_PRICE, GAS_LIMIT);
             const deployedHandlerAddress = await deployERC20Handler(deployedBridgeContractAddress, chainWallet, GAS_PRICE, GAS_LIMIT);
 
-            /**
-             * Deploy mintable factory
-             * contract
-             */
+            // Deploy mintable factory contract
             const mintableCoinFactoryAddress = await deployMintableCoinFactory(chainWallet, GAS_PRICE, GAS_LIMIT);
             const cloneableMintableERC20Address = await deployCloneableERC20(chainWallet, GAS_PRICE, GAS_LIMIT);
 
@@ -49,10 +38,7 @@ exports.deployBridgeSingleSide = new commander.Command("deployBridgeSingleSide")
 
 
             if (process.env.MULTISIG_ADDRESS.length) {
-                let bridgeInstance = new ethers.Contract(deployedBridgeContractAddress, ContractABIs.Bridge.abi, chainWallet);
-                let tx = await bridgeInstance.renounceAdmin(process.env.MULTISIG_ADDRESS);
-                await waitForTx(chainProvider, tx.hash);
-                console.log(`Transferred ${process.env.CHAIN_NAME} bridge ownership to ${process.env.MULTISIG_ADDRESS}`);
+                await renounceBridgeAdmin(deployedBridgeContractAddress, chainWallet, chainProvider, process.env.MULTISIG_ADDRESS, process.env.CHAIN_NAME)
             }
 
             let chainBridgeConfig = createChainConfig(process.env.CHAIN_NAME,

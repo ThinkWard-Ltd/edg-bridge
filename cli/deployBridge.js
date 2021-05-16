@@ -1,6 +1,5 @@
 const commander = require('commander');
 const path = require('path');
-const ethers = require("ethers");
 
 const { DEST_CHAIN_DEFAULT_ID, SRC_CHAIN_DEFAULT_ID } = require("../constants");
 const { getWalletAndProvider, createChainConfig, publishRelayerConfiguration, createRelayerConfig } = require("../utils");
