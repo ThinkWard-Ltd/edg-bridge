@@ -25,15 +25,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.4+commit.1dca32f3\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenID\",\"type\":\"uint256\"}],\"name\":\"fundERC721\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"ChainSafe Systems.\",\"methods\":{\"fundERC721(address,address,uint256)\":{\"params\":{\"owner\":\"Address of current token owner.\",\"tokenAddress\":\"Address of ERC721 to transfer.\",\"tokenID\":\"ID of token to transfer.\"}}},\"title\":\"Manages deposited ERC721s.\"},\"userdoc\":{\"methods\":{\"fundERC721(address,address,uint256)\":{\"notice\":\"Used to transfer tokens into the safe to fund proposals.\"}},\"notice\":\"This contract is intended to be used with ERC721Handler contract.\"}},\"settings\":{\"compilationTarget\":{\"/home/saadjhk/Desktop/chainbridge-solidity/contracts/ERC721Safe.sol\":\"ERC721Safe\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/saadjhk/Desktop/chainbridge-solidity/contracts/ERC721MinterBurnerPauser.sol\":{\"keccak256\":\"0x4db2e2b03be0967d797b5a5dbd070b812df61d874b4d48c4e70abe551ceef05a\",\"urls\":[\"bzz-raw://ee81fd0088dcd744df83064e848a87d7fffa5ead506861f314e06d98f35fae1a\",\"dweb:/ipfs/QmPmR75Bvb9Pebb5eiU4StbMm6kpoRmaU7t6XCn67BpGxc\"]},\"/home/saadjhk/Desktop/chainbridge-solidity/contracts/ERC721Safe.sol\":{\"keccak256\":\"0xf4bf36d82813ed53c3c14410a4621c8acb7e9f857bd610330ef9acac733429b5\",\"urls\":[\"bzz-raw://c7489854e20ac3e21e77ea51dbe3c3b4ce50dc305ccc4f45222e7997c13ab767\",\"dweb:/ipfs/QmVp4D7Skr5JDARQSobkKTAQxERtisuxqd4na9ZPqKfpGT\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0x0de74dfa6b37943c1b834cbd8fb7a8d052e5ff80c7adb33692102dd6cd2985e9\",\"urls\":[\"bzz-raw://9d2d827fcf4a838f5821732c0acd6a40d21c2a5a2cfe2563feec91465f47bb60\",\"dweb:/ipfs/Qmex3wMKf5Sghbfvr288RUg1kP2uAyTMf11w83WbMbpQQc\"]},\"@openzeppelin/contracts/access/AccessControl.sol\":{\"keccak256\":\"0xc35d706da2c3b3228e8c2bfd9c775201688ef307e4990cd59a6dadc2a61abddc\",\"urls\":[\"bzz-raw://45c9859e241844143aaad5054ca5ffebf998a069592cd9c780c88c723849400b\",\"dweb:/ipfs/QmPFPTuys4hWRUga4UJvdyXKP32a9kdhg8hDu7Zku1ENFT\"]},\"@openzeppelin/contracts/introspection/ERC165.sol\":{\"keccak256\":\"0x98aa1380fd49a255d6cbea58558ea76bff35c59b218671fde8842907b44e7390\",\"urls\":[\"bzz-raw://613eaff66d4c270ddd87448c06267b6e043ef8c8223cb39d8767bc9daa9cb1ec\",\"dweb:/ipfs/Qmcg56orudv25ghmnZCxN37HwNKCXmTTDxj5cyoYYnvHTg\"]},\"@openzeppelin/contracts/introspection/IERC165.sol\":{\"keccak256\":\"0x9175561c374ec1fc33045e5dfdde2057e63e00debf432875f9e1e3395d99c149\",\"urls\":[\"bzz-raw://b0167043c1938b56904deaa481a73041aa4a9e054c60db0b0dfbebfe7869c06a\",\"dweb:/ipfs/QmUoYjhymBr6WUpExKgRvKxXD5fcdpQEe1o9ResKZu6CC5\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x04d34b3cd5677bea25f8dfceb6dec0eaa071d4d4b789a43f13fe0c415ba4c296\",\"urls\":[\"bzz-raw://e7e8b526a6839e5ba14f0d23a830387fec47f7043ce01d42c9f285b709a9d080\",\"dweb:/ipfs/QmXmhhFmX5gcAvVzNiDPAGA35iHMPNaYtQkACswRHBVTNw\"]},\"@openzeppelin/contracts/token/ERC721/ERC721.sol\":{\"keccak256\":\"0x67a43d3926e72576c96ebf0e6360c979a8cc04f25e4b0ca40c221547d8903ba4\",\"urls\":[\"bzz-raw://77c6f48115c491411f0e27f6b70e2e524b1b57c66e74bd7f1974a31a448e2540\",\"dweb:/ipfs/QmPZCizouS9PVJ1dVf8zqTjHyEo5cSa1ZmPCQpk52TgrmV\"]},\"@openzeppelin/contracts/token/ERC721/ERC721Burnable.sol\":{\"keccak256\":\"0x70d75229a5b340148faab86a10d39e8d242b7202ce23a6925066abcfb7ff567a\",\"urls\":[\"bzz-raw://895e0ad84c44490543b58118f65a6332f3de58752b80d03dfd5d063244841b24\",\"dweb:/ipfs/QmeK33G3TKYdYFhZgvoDKuh2cHEGgLdVAdBq3m7Go9XA4B\"]},\"@openzeppelin/contracts/token/ERC721/ERC721Pausable.sol\":{\"keccak256\":\"0xc0acbf0b9adeaca7af8b0a4864934aec7d4baf5b25002c08227221084dd794e4\",\"urls\":[\"bzz-raw://e7eea0ad2fb3d8f45d94eb9b6afc0f86f9ea819a53d09dad2cac1b5760203b0c\",\"dweb:/ipfs/QmdD9PkA8kt8kNsNvq9KYXhbo6AQwgUoYDFbeNWjEQraBa\"]},\"@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x708f339ccc3e9d164ec61bb0db7d4c224161a3bca52413c8bbeddb114154e52b\",\"urls\":[\"bzz-raw://1462c089d30cd75f9ce18c39a26f41adcb74e4a14d2cb9f5c8bcb0a8631fa660\",\"dweb:/ipfs/QmP9hGNkYTpRazqXnQoSyiUiL8DJr3Y8nX9Wcg7SukNMUf\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Enumerable.sol\":{\"keccak256\":\"0x09bbc2d7d73986e6e645d0dd65cd16f41248e5cc991f06d42db2946b5f2e3786\",\"urls\":[\"bzz-raw://4f5f3ca771fe28f1bd7de5521bb2ef23b7fadb681b0b0a7ed13d0e2772a1d945\",\"dweb:/ipfs/QmSbLtedzXRjruuhQjx7AXjpg5CGC98g1TBKaVUf1nU38a\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Metadata.sol\":{\"keccak256\":\"0x435bd9ac283c6678ac71c809bae5fb738ea2228b7cf8663ad111894d19f567cb\",\"urls\":[\"bzz-raw://01d79169830e56ab0980901b66d4b404db89acfafd5836903eadf0df22f8dcdd\",\"dweb:/ipfs/QmTTBj8GUZoMZ8EH7YyaV88QmD4QDg32vs2KNymdUKAoMd\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0x0c25ff00a747f1df6cb5e5c103adb98334df7e9561b0d46079454131c139bff9\",\"urls\":[\"bzz-raw://9417ce94829309329fa0f0dc50089696bc55f9f675c4b2ffcb31f960fe706250\",\"dweb:/ipfs/QmdckiAmnW2uhXK2V2enu7bEbqiMR6hzMD1ytGH43pKLhE\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x5f7da58ee3d9faa9b8999a93d49c8ff978f1afc88ae9bcfc6f9cbb44da011c2b\",\"urls\":[\"bzz-raw://4f089d954b3ecaa26949412fe63e9a184b056562c6c13dd4a0529a5d9a2e685a\",\"dweb:/ipfs/QmVK5iCNAMcEJQxT59bsC5E53JQASDQPU6khHox3d5ZXCn\"]},\"@openzeppelin/contracts/utils/Counters.sol\":{\"keccak256\":\"0x4f3a00edb976e97943fe0a620ea2948955a75eff2a9231c202d50d1e062d8da5\",\"urls\":[\"bzz-raw://4d83aa87b7c75f666d57a0e5b779a19c00b453b14ee4ed88cfda6d056fdcf14c\",\"dweb:/ipfs/QmXpWwQVFo66hsrAZmHxoxNzwEwBDgNWvaUYqY4TJV38vk\"]},\"@openzeppelin/contracts/utils/EnumerableMap.sol\":{\"keccak256\":\"0xfd5cf8319cb84ca04ea407d6fba686d53ad7f5d2bf476f41678f5a751d12a7ea\",\"urls\":[\"bzz-raw://45b75b553c4a9053429609b1c3db481f1728ca00448f01acc4065249bbf87adc\",\"dweb:/ipfs/QmRZH6QM32mJn1GZCAPXUQtBz65H4kk6DsGQbGNo4ZNPy9\"]},\"@openzeppelin/contracts/utils/EnumerableSet.sol\":{\"keccak256\":\"0x7f6401708b61f575b497aa7c8118ca9d70348643c83c26e70d9b643edf1a95c1\",\"urls\":[\"bzz-raw://b020d65f592c1715bc3d5799ad835cd975ef7d314f340f27603fb99ad86a0427\",\"dweb:/ipfs/QmQoGZmzE5aDTMGJM4BW77eraerfTSV9Rs8wykpQ42i1in\"]},\"@openzeppelin/contracts/utils/Pausable.sol\":{\"keccak256\":\"0x0336d64bd695c5d8bb962fd3dacb3d26f52879b19e75472d7dea9f91f7add79a\",\"urls\":[\"bzz-raw://d709c1de86475b74fa4f614458e868213f8e5b13eed8b29b465793cd97e5c0f5\",\"dweb:/ipfs/QmYVgazum1VVeDoJYYmKhAJ1mcuTy8vidb2iFEMWcVdSeY\"]},\"@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0xd1d78b1c8534fbcf8fdc8fbfec9133df142ef8cae9ae820929dfe6d80d2c790a\",\"urls\":[\"bzz-raw://193a827fbe83fa83c4cabb172dc438dd45c50253858a1f2bf56e8f9a2d548386\",\"dweb:/ipfs/QmbWBHwHv7CyHSZY6jxnaDiHWGEEyVb8LeGdRpWXUjaiBr\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506101b2806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c80637354298014610030575b600080fd5b61009c6004803603606081101561004657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919050505061009e565b005b60008390508073ffffffffffffffffffffffffffffffffffffffff166323b872dd8430856040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019350505050600060405180830381600087803b15801561015e57600080fd5b505af1158015610172573d6000803e3d6000fd5b505050505050505056fea2646970667358221220c12da4e178c46d83c1dcc60d959afdd3b9428bbfa3c08a780299149dcc431aa864736f6c63430006040033",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c80637354298014610030575b600080fd5b61009c6004803603606081101561004657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919050505061009e565b005b60008390508073ffffffffffffffffffffffffffffffffffffffff166323b872dd8430856040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019350505050600060405180830381600087803b15801561015e57600080fd5b505af1158015610172573d6000803e3d6000fd5b505050505050505056fea2646970667358221220c12da4e178c46d83c1dcc60d959afdd3b9428bbfa3c08a780299149dcc431aa864736f6c63430006040033",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.4+commit.1dca32f3\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenID\",\"type\":\"uint256\"}],\"name\":\"fundERC721\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"ChainSafe Systems.\",\"methods\":{\"fundERC721(address,address,uint256)\":{\"params\":{\"owner\":\"Address of current token owner.\",\"tokenAddress\":\"Address of ERC721 to transfer.\",\"tokenID\":\"ID of token to transfer.\"}}},\"title\":\"Manages deposited ERC721s.\"},\"userdoc\":{\"methods\":{\"fundERC721(address,address,uint256)\":{\"notice\":\"Used to transfer tokens into the safe to fund proposals.\"}},\"notice\":\"This contract is intended to be used with ERC721Handler contract.\"}},\"settings\":{\"compilationTarget\":{\"/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/ERC721Safe.sol\":\"ERC721Safe\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/ERC721MinterBurnerPauser.sol\":{\"keccak256\":\"0x4db2e2b03be0967d797b5a5dbd070b812df61d874b4d48c4e70abe551ceef05a\",\"urls\":[\"bzz-raw://ee81fd0088dcd744df83064e848a87d7fffa5ead506861f314e06d98f35fae1a\",\"dweb:/ipfs/QmPmR75Bvb9Pebb5eiU4StbMm6kpoRmaU7t6XCn67BpGxc\"]},\"/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/ERC721Safe.sol\":{\"keccak256\":\"0xf4bf36d82813ed53c3c14410a4621c8acb7e9f857bd610330ef9acac733429b5\",\"urls\":[\"bzz-raw://c7489854e20ac3e21e77ea51dbe3c3b4ce50dc305ccc4f45222e7997c13ab767\",\"dweb:/ipfs/QmVp4D7Skr5JDARQSobkKTAQxERtisuxqd4na9ZPqKfpGT\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0x9486045e189facd2e868ece35249872598ef03f1087fb6fa4d1161842daa2287\",\"urls\":[\"bzz-raw://77c3a04ef8453788b14b1ebbc24dd3f0a18ceb2615cd156aac949a611e552af8\",\"dweb:/ipfs/QmcmqWGguRM3iLuF57tcyrN3F6EA63kzeNkDfQuteBnurr\"]},\"@openzeppelin/contracts/access/AccessControl.sol\":{\"keccak256\":\"0x4fc155a2f7837603d69a13cfa481eb5e7f5e02cb77e2ec9edbac30986db37988\",\"urls\":[\"bzz-raw://0855147e38b5e36288a8df73b8da49132f14ec7abb19041b0c98872263643aaa\",\"dweb:/ipfs/QmSrSysyFUYQq7hbJaJXG7EyZW6ezDBzEJx3SABp6eiJSS\"]},\"@openzeppelin/contracts/introspection/ERC165.sol\":{\"keccak256\":\"0x24141d2f6b98d4cb77a8936eae8cbaad2e261d9062bdc08036096f4550092501\",\"urls\":[\"bzz-raw://b710eb003944777135f027500a5a57b479fe857849f5f467c1ef9687401e3c95\",\"dweb:/ipfs/QmcELzi6KRzAs3DXwxdsoKWRJ13KSeipKQsJgD3unctdZM\"]},\"@openzeppelin/contracts/introspection/IERC165.sol\":{\"keccak256\":\"0xf70bc25d981e4ec9673a995ad2995d5d493ea188d3d8f388bba9c227ce09fb82\",\"urls\":[\"bzz-raw://bd970f51e3a77790c2f02b5b1759827c3b897c3d98c407b3631e8af32e3dc93c\",\"dweb:/ipfs/QmPF85Amgbqjk3SNZKsPCsqCw8JfwYEPMnnhvMJUyX58je\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xcc78a17dd88fa5a2edc60c8489e2f405c0913b377216a5b26b35656b2d0dab52\",\"urls\":[\"bzz-raw://526dc85e1f9b9b45830e202568d267d93dde7a4fcccf4ad7798dadcd92304d3c\",\"dweb:/ipfs/QmaoXMB972J3cSDLtBq3xBo4jLwqD2uzXTwujtSPqkYVhR\"]},\"@openzeppelin/contracts/token/ERC721/ERC721.sol\":{\"keccak256\":\"0x118ed7540f56b21ff92e21ebaa73584048e98d2ac04ca67571329bb8dbd9032f\",\"urls\":[\"bzz-raw://da2918b7aff73dd51d41bfcfa548f81eb50531b8353500fdbdacf297076db070\",\"dweb:/ipfs/Qmb8ixAs1vBjZRowQNuNg6bRf2NZmgZ1JTBxmQS14PHpcL\"]},\"@openzeppelin/contracts/token/ERC721/ERC721Burnable.sol\":{\"keccak256\":\"0x060925a04766df64ac29f56aaa3a38aafd71424ba4d996ca0f14363828b97056\",\"urls\":[\"bzz-raw://8593f0fcac22c97956ab3e779e8a55a6c33dd01059fa01f15992518e708f4e6f\",\"dweb:/ipfs/QmWYQcAy7R6v5prSfmigmrhr7nGxwzkbZkmdeMcLNLUG66\"]},\"@openzeppelin/contracts/token/ERC721/ERC721Pausable.sol\":{\"keccak256\":\"0x1c31a4c2ad1af9e25cd8f4ea941ebd6a6a932426183ab39c160cb8e51cfc704f\",\"urls\":[\"bzz-raw://77dd2448bbeb4a8f6f3273042d02326fa6ba191827e5b37f6f68492b17d022c9\",\"dweb:/ipfs/QmRiAmuxtRcVRhXUymziiTD3r8SGcjxKN95ZLVKd2jtWjN\"]},\"@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x2d99a0deb6648c34fbc66d6ac4a2d64798d7a5321b45624f6736fadc63da1962\",\"urls\":[\"bzz-raw://2dcdce5ede1e5e650d174ec0b35be7d47b6a50f30bc895ef0d9e59fb75052e45\",\"dweb:/ipfs/QmQ2XFsDLTYqfEdw7pYzHiGtFRY11yQm4b6ynYgKqDxeB8\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Enumerable.sol\":{\"keccak256\":\"0xe6bd1b1218338b6f9fe17776f48623b4ac3d8a40405f74a44bc23c00abe2ca13\",\"urls\":[\"bzz-raw://0c354c3f6e9c487759aa7869be4fba68e0b2efc777b514d289c4cbd3ff8f7e1a\",\"dweb:/ipfs/QmdF9LcSYVmiUCL7JxLEYmSLrjga6zJsujfi6sgEJD4M1z\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Metadata.sol\":{\"keccak256\":\"0xccb917776f826ac6b68bd5a15a5f711e3967848a52ba11e6104d9a4f593314a7\",\"urls\":[\"bzz-raw://430255ad2229ced6d880e61a67bdc6e48dbbaed8354a7c1fe918cd8b8714a886\",\"dweb:/ipfs/QmTHY56odzqEpEC6v6tafaWMYY7vmULw25q5XHJLCCAeox\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0x52146049d6709c870e8ddcd988b5155cb6c5d640cfcd8978aee52bc1ba2ec4eb\",\"urls\":[\"bzz-raw://ada84513617b7c1b2f890b44503735abaec73a1acd030112a17aac7e6c66a4a1\",\"dweb:/ipfs/QmaiFwdio67iJrfjAdkMac24eJ5sS1qD7CZW6PhUU6KjiK\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x28911e614500ae7c607a432a709d35da25f3bc5ddc8bd12b278b66358070c0ea\",\"urls\":[\"bzz-raw://256c8c8af5eb072bc473226ab2b2187149b8fc04f5f4a4820db22527f5ce8e3c\",\"dweb:/ipfs/QmRvi5BhnL7Rxf85KrJhwM6RRhukm4tzoctRdgQEheNyiN\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0\",\"urls\":[\"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f\",\"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96\"]},\"@openzeppelin/contracts/utils/Counters.sol\":{\"keccak256\":\"0x21662e4254ce4ac8570b30cc7ab31435966b3cb778a56ba4d09276881cfb2437\",\"urls\":[\"bzz-raw://acce8fe6adc670f9987a8b6aedc4cc0abcd0dcd2e152d649a12099d735bd7bad\",\"dweb:/ipfs/QmXAk17oK3daBmA8CGyVcU56L496jW3U6Ef1WkfHyB1JAV\"]},\"@openzeppelin/contracts/utils/EnumerableMap.sol\":{\"keccak256\":\"0x4b087f06b6670a131a5a14e53b1d2a5ef19c034cc5ec42eeebcf9554325744ad\",\"urls\":[\"bzz-raw://f6a6af5d848334e40db419773f6360601e311ffc21c2e274f730b8c542da99fd\",\"dweb:/ipfs/QmfA24cxQ2g41ZWUuDF295dxDJ4xF1bSDYtC3EaLd7CzW8\"]},\"@openzeppelin/contracts/utils/EnumerableSet.sol\":{\"keccak256\":\"0x1562cd9922fbf739edfb979f506809e2743789cbde3177515542161c3d04b164\",\"urls\":[\"bzz-raw://4580d57781513d98870d9738c7d39094336e0a70cdb90d68dad549c6ced466ec\",\"dweb:/ipfs/Qmf9YZzzRFuvMnav9dgmeRUpdYMMECiZX8w25sHWVbA18V\"]},\"@openzeppelin/contracts/utils/Pausable.sol\":{\"keccak256\":\"0x212fb1b1d4beaf74354dad9bc329f44ee3c5375ef1c32acff76b4ecefc10f1d8\",\"urls\":[\"bzz-raw://d21c68cb321d1c8d0fa39fd9ecb6bbe3b2f26623b0f38af280a010c916c85f23\",\"dweb:/ipfs/Qmf2P51HRC4ekDHLYfbXu5SXR33gXrWtq6oKSmfyWqVRuC\"]},\"@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0xa1e12f97981f1d0964b1c048978606a57127c56c438bab61cdfe269cad859a74\",\"urls\":[\"bzz-raw://5eefac1760f524971e14aa3f3d79515a3d54fd28c1d3bdca0b36127da349b830\",\"dweb:/ipfs/QmUMzkyH3ytJX5gVPizQruNLhkKmuJb3nFqBDad4LPdg5U\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101b2806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c80637354298014610030575b600080fd5b61009c6004803603606081101561004657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919050505061009e565b005b60008390508073ffffffffffffffffffffffffffffffffffffffff166323b872dd8430856040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019350505050600060405180830381600087803b15801561015e57600080fd5b505af1158015610172573d6000803e3d6000fd5b505050505050505056fea26469706673582212201721d90c6c897a8aa24385800bf04d22272e024e84990c884a188a08870b06c964736f6c63430006040033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c80637354298014610030575b600080fd5b61009c6004803603606081101561004657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919050505061009e565b005b60008390508073ffffffffffffffffffffffffffffffffffffffff166323b872dd8430856040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019350505050600060405180830381600087803b15801561015e57600080fd5b505af1158015610172573d6000803e3d6000fd5b505050505050505056fea26469706673582212201721d90c6c897a8aa24385800bf04d22272e024e84990c884a188a08870b06c964736f6c63430006040033",
   "sourceMap": "332:2396:4:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;332:2396:4;;;;;;;",
   "deployedSourceMap": "332:2396:4:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;332:2396:4;;;;;;;;;;;;;;;;12:1:-1;9;2:12;640:193:4;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;640:193:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;728:14;753:12;728:38;;776:6;:19;;;796:5;811:4;818:7;776:50;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;776:50:4;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;776:50:4;;;;640:193;;;;:::o",
   "source": "pragma solidity 0.6.4;\n\nimport \"@openzeppelin/contracts/math/SafeMath.sol\";\nimport \"@openzeppelin/contracts/token/ERC721/IERC721.sol\";\nimport \"./ERC721MinterBurnerPauser.sol\";\n\n/**\n    @title Manages deposited ERC721s.\n    @author ChainSafe Systems.\n    @notice This contract is intended to be used with ERC721Handler contract.\n */\ncontract ERC721Safe {\n    using SafeMath for uint256;\n\n    /**\n        @notice Used to transfer tokens into the safe to fund proposals.\n        @param tokenAddress Address of ERC721 to transfer.\n        @param owner Address of current token owner.\n        @param tokenID ID of token to transfer.\n     */\n    function fundERC721(address tokenAddress, address owner, uint tokenID) public {\n        IERC721 erc721 = IERC721(tokenAddress);\n        erc721.transferFrom(owner, address(this), tokenID);\n    }\n\n    /**\n        @notice Used to gain custoday of deposited token.\n        @param tokenAddress Address of ERC721 to transfer.\n        @param owner Address of current token owner.\n        @param recipient Address to transfer token to.\n        @param tokenID ID of token to transfer.\n     */\n    function lockERC721(address tokenAddress, address owner, address recipient, uint tokenID) internal {\n        IERC721 erc721 = IERC721(tokenAddress);\n        erc721.transferFrom(owner, recipient, tokenID);\n\n    }\n\n    /**\n        @notice Transfers custody of token to recipient.\n        @param tokenAddress Address of ERC721 to transfer.\n        @param owner Address of current token owner.\n        @param recipient Address to transfer token to.\n        @param tokenID ID of token to transfer.\n     */\n    function releaseERC721(address tokenAddress, address owner, address recipient, uint256 tokenID) internal {\n        IERC721 erc721 = IERC721(tokenAddress);\n        erc721.transferFrom(owner, recipient, tokenID);\n    }\n\n    /**\n        @notice Used to create new ERC721s.\n        @param tokenAddress Address of ERC721 to mint.\n        @param recipient Address to mint token to.\n        @param tokenID ID of token to mint.\n        @param data Optional data to send along with mint call.\n     */\n    function mintERC721(address tokenAddress, address recipient, uint256 tokenID, bytes memory data) internal {\n        ERC721MinterBurnerPauser erc721 = ERC721MinterBurnerPauser(tokenAddress);\n        erc721.mint(recipient, tokenID, string(data));\n    }\n\n    /**\n        @notice Used to burn ERC721s.\n        @param tokenAddress Address of ERC721 to burn.\n        @param tokenID ID of token to burn.\n     */\n    function burnERC721(address tokenAddress, uint256 tokenID) internal {\n        ERC721MinterBurnerPauser erc721 = ERC721MinterBurnerPauser(tokenAddress);\n        erc721.burn(tokenID);\n    }\n\n}\n",
-  "sourcePath": "/home/saadjhk/Desktop/chainbridge-solidity/contracts/ERC721Safe.sol",
+  "sourcePath": "/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/ERC721Safe.sol",
   "ast": {
-    "absolutePath": "/home/saadjhk/Desktop/chainbridge-solidity/contracts/ERC721Safe.sol",
+    "absolutePath": "/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/ERC721Safe.sol",
     "exportedSymbols": {
       "ERC721Safe": [
         1653
@@ -58,7 +58,7 @@
         "id": 1513,
         "nodeType": "ImportDirective",
         "scope": 1654,
-        "sourceUnit": 3868,
+        "sourceUnit": 4077,
         "src": "24:51:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -69,13 +69,13 @@
         "id": 1514,
         "nodeType": "ImportDirective",
         "scope": 1654,
-        "sourceUnit": 5813,
+        "sourceUnit": 6017,
         "src": "76:58:4",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/saadjhk/Desktop/chainbridge-solidity/contracts/ERC721MinterBurnerPauser.sol",
+        "absolutePath": "/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/ERC721MinterBurnerPauser.sol",
         "file": "./ERC721MinterBurnerPauser.sol",
         "id": 1515,
         "nodeType": "ImportDirective",
@@ -111,10 +111,10 @@
               "id": 1517,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3867,
+              "referencedDeclaration": 4076,
               "src": "364:8:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_SafeMath_$3867",
+                "typeIdentifier": "t_contract$_SafeMath_$4076",
                 "typeString": "library SafeMath"
               }
             },
@@ -153,7 +153,7 @@
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IERC721_$5812",
+                        "typeIdentifier": "t_contract$_IERC721_$6016",
                         "typeString": "contract IERC721"
                       },
                       "typeName": {
@@ -161,10 +161,10 @@
                         "id": 1529,
                         "name": "IERC721",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 5812,
+                        "referencedDeclaration": 6016,
                         "src": "728:7:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IERC721_$5812",
+                          "typeIdentifier": "t_contract$_IERC721_$6016",
                           "typeString": "contract IERC721"
                         }
                       },
@@ -201,10 +201,10 @@
                       "name": "IERC721",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5812,
+                      "referencedDeclaration": 6016,
                       "src": "745:7:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_contract$_IERC721_$5812_$",
+                        "typeIdentifier": "t_type$_t_contract$_IERC721_$6016_$",
                         "typeString": "type(contract IERC721)"
                       }
                     },
@@ -219,7 +219,7 @@
                     "src": "745:21:4",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC721_$5812",
+                      "typeIdentifier": "t_contract$_IERC721_$6016",
                       "typeString": "contract IERC721"
                     }
                   },
@@ -342,7 +342,7 @@
                         "referencedDeclaration": 1530,
                         "src": "776:6:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IERC721_$5812",
+                          "typeIdentifier": "t_contract$_IERC721_$6016",
                           "typeString": "contract IERC721"
                         }
                       },
@@ -353,7 +353,7 @@
                       "lValueRequested": false,
                       "memberName": "transferFrom",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 5765,
+                      "referencedDeclaration": 5969,
                       "src": "776:19:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -519,7 +519,7 @@
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IERC721_$5812",
+                        "typeIdentifier": "t_contract$_IERC721_$6016",
                         "typeString": "contract IERC721"
                       },
                       "typeName": {
@@ -527,10 +527,10 @@
                         "id": 1559,
                         "name": "IERC721",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 5812,
+                        "referencedDeclaration": 6016,
                         "src": "1237:7:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IERC721_$5812",
+                          "typeIdentifier": "t_contract$_IERC721_$6016",
                           "typeString": "contract IERC721"
                         }
                       },
@@ -567,10 +567,10 @@
                       "name": "IERC721",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5812,
+                      "referencedDeclaration": 6016,
                       "src": "1254:7:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_contract$_IERC721_$5812_$",
+                        "typeIdentifier": "t_type$_t_contract$_IERC721_$6016_$",
                         "typeString": "type(contract IERC721)"
                       }
                     },
@@ -585,7 +585,7 @@
                     "src": "1254:21:4",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC721_$5812",
+                      "typeIdentifier": "t_contract$_IERC721_$6016",
                       "typeString": "contract IERC721"
                     }
                   },
@@ -660,7 +660,7 @@
                         "referencedDeclaration": 1560,
                         "src": "1285:6:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IERC721_$5812",
+                          "typeIdentifier": "t_contract$_IERC721_$6016",
                           "typeString": "contract IERC721"
                         }
                       },
@@ -671,7 +671,7 @@
                       "lValueRequested": false,
                       "memberName": "transferFrom",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 5765,
+                      "referencedDeclaration": 5969,
                       "src": "1285:19:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -864,7 +864,7 @@
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IERC721_$5812",
+                        "typeIdentifier": "t_contract$_IERC721_$6016",
                         "typeString": "contract IERC721"
                       },
                       "typeName": {
@@ -872,10 +872,10 @@
                         "id": 1586,
                         "name": "IERC721",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 5812,
+                        "referencedDeclaration": 6016,
                         "src": "1748:7:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IERC721_$5812",
+                          "typeIdentifier": "t_contract$_IERC721_$6016",
                           "typeString": "contract IERC721"
                         }
                       },
@@ -912,10 +912,10 @@
                       "name": "IERC721",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5812,
+                      "referencedDeclaration": 6016,
                       "src": "1765:7:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_contract$_IERC721_$5812_$",
+                        "typeIdentifier": "t_type$_t_contract$_IERC721_$6016_$",
                         "typeString": "type(contract IERC721)"
                       }
                     },
@@ -930,7 +930,7 @@
                     "src": "1765:21:4",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC721_$5812",
+                      "typeIdentifier": "t_contract$_IERC721_$6016",
                       "typeString": "contract IERC721"
                     }
                   },
@@ -1005,7 +1005,7 @@
                         "referencedDeclaration": 1587,
                         "src": "1796:6:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IERC721_$5812",
+                          "typeIdentifier": "t_contract$_IERC721_$6016",
                           "typeString": "contract IERC721"
                         }
                       },
@@ -1016,7 +1016,7 @@
                       "lValueRequested": false,
                       "memberName": "transferFrom",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 5765,
+                      "referencedDeclaration": 5969,
                       "src": "1796:19:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -1719,7 +1719,7 @@
                       "lValueRequested": false,
                       "memberName": "burn",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 5658,
+                      "referencedDeclaration": 5862,
                       "src": "2698:11:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
@@ -1843,7 +1843,7 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/home/saadjhk/Desktop/chainbridge-solidity/contracts/ERC721Safe.sol",
+      "absolutePath": "/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/ERC721Safe.sol",
       "exportedSymbols": {
         "ERC721Safe": [
           1653
@@ -1865,7 +1865,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 3868,
+          "SourceUnit": 4077,
           "absolutePath": "@openzeppelin/contracts/math/SafeMath.sol",
           "file": "@openzeppelin/contracts/math/SafeMath.sol",
           "scope": 1654,
@@ -1880,7 +1880,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 5813,
+          "SourceUnit": 6017,
           "absolutePath": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
           "file": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
           "scope": 1654,
@@ -1896,7 +1896,7 @@
       {
         "attributes": {
           "SourceUnit": 1511,
-          "absolutePath": "/home/saadjhk/Desktop/chainbridge-solidity/contracts/ERC721MinterBurnerPauser.sol",
+          "absolutePath": "/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/ERC721MinterBurnerPauser.sol",
           "file": "./ERC721MinterBurnerPauser.sol",
           "scope": 1654,
           "symbolAliases": [
@@ -1940,7 +1940,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "SafeMath",
-                  "referencedDeclaration": 3867,
+                  "referencedDeclaration": 4076,
                   "type": "library SafeMath"
                 },
                 "id": 1517,
@@ -2113,7 +2113,7 @@
                             "attributes": {
                               "contractScope": null,
                               "name": "IERC721",
-                              "referencedDeclaration": 5812,
+                              "referencedDeclaration": 6016,
                               "type": "contract IERC721"
                             },
                             "id": 1529,
@@ -2152,7 +2152,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 5812,
+                              "referencedDeclaration": 6016,
                               "type": "type(contract IERC721)",
                               "value": "IERC721"
                             },
@@ -2223,7 +2223,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "transferFrom",
-                              "referencedDeclaration": 5765,
+                              "referencedDeclaration": 5969,
                               "type": "function (address,address,uint256) external"
                             },
                             "children": [
@@ -2537,7 +2537,7 @@
                             "attributes": {
                               "contractScope": null,
                               "name": "IERC721",
-                              "referencedDeclaration": 5812,
+                              "referencedDeclaration": 6016,
                               "type": "contract IERC721"
                             },
                             "id": 1559,
@@ -2576,7 +2576,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 5812,
+                              "referencedDeclaration": 6016,
                               "type": "type(contract IERC721)",
                               "value": "IERC721"
                             },
@@ -2647,7 +2647,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "transferFrom",
-                              "referencedDeclaration": 5765,
+                              "referencedDeclaration": 5969,
                               "type": "function (address,address,uint256) external"
                             },
                             "children": [
@@ -2911,7 +2911,7 @@
                             "attributes": {
                               "contractScope": null,
                               "name": "IERC721",
-                              "referencedDeclaration": 5812,
+                              "referencedDeclaration": 6016,
                               "type": "contract IERC721"
                             },
                             "id": 1586,
@@ -2950,7 +2950,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 5812,
+                              "referencedDeclaration": 6016,
                               "type": "type(contract IERC721)",
                               "value": "IERC721"
                             },
@@ -3021,7 +3021,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "transferFrom",
-                              "referencedDeclaration": 5765,
+                              "referencedDeclaration": 5969,
                               "type": "function (address,address,uint256) external"
                             },
                             "children": [
@@ -3754,7 +3754,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "burn",
-                              "referencedDeclaration": 5658,
+                              "referencedDeclaration": 5862,
                               "type": "function (uint256) external"
                             },
                             "children": [
@@ -3826,8 +3826,8 @@
     "version": "0.6.4+commit.1dca32f3.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.3.3",
-  "updatedAt": "2021-04-22T06:05:54.778Z",
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-05-17T11:21:10.699Z",
   "devdoc": {
     "author": "ChainSafe Systems.",
     "methods": {

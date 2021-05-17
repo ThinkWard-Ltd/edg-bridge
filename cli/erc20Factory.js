@@ -26,7 +26,7 @@ async function createERC20ViaFactory(
             try {
                 // get data key from topic data
                 const newCreatedAddress = topicData.data.slice(26);
-                console.log(`Token Created: ${newCreatedAddress}`);
+                console.log(`Token Created: 0x${newCreatedAddress}`);
                 const originalOwner = await chainWallet.getAddress();
 
                 const erc20Cloneable = new ethers.Contract(`0x${newCreatedAddress}`, ContractABIs.CloneableMintableERC20.abi, chainWallet);
@@ -37,7 +37,7 @@ async function createERC20ViaFactory(
                 await waitForTx(chainProvider, tx.hash);
 
                 const symbolName = await erc20Cloneable.name();
-                console.log(`${symbolName} deployed at ${newCreatedAddress}, and transferred ownership to ${multiSigAddress}`);
+                console.log(`${symbolName} deployed at 0x${newCreatedAddress}, and transferred ownership to ${multiSigAddress}`);
                 process.exit(1);
             } catch (err) {
                 console.log(err);

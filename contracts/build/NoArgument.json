@@ -15,15 +15,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.4+commit.1dca32f3\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[],\"name\":\"NoArgumentCalled\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"noArgument\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/saadjhk/Desktop/chainbridge-solidity/contracts/TestContracts.sol\":\"NoArgument\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/saadjhk/Desktop/chainbridge-solidity/contracts/TestContracts.sol\":{\"keccak256\":\"0x4f17680f1a7de54e9760fec6718f9ed78e4198bda0d734468b21ed54e6a66e31\",\"urls\":[\"bzz-raw://8184b007a58646427ce5a55b33c24df6a1eaca59dadd25716d3ece94646325ec\",\"dweb:/ipfs/QmQzFqpKFxYQCx9ETB96XsutEBAjazGCiaP9GqN9jwmqE5\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b5060998061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063568959ca14602d575b600080fd5b60336035565b005b7fc582abe1670c5a7f7cad8f171e4af03c793dd9f59fee6714179f56b6e9aea26f60405160405180910390a156fea2646970667358221220473df899845783ad52702a7710aa3d5af6efad341eedad7bc3002396a6d0757a64736f6c63430006040033",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063568959ca14602d575b600080fd5b60336035565b005b7fc582abe1670c5a7f7cad8f171e4af03c793dd9f59fee6714179f56b6e9aea26f60405160405180910390a156fea2646970667358221220473df899845783ad52702a7710aa3d5af6efad341eedad7bc3002396a6d0757a64736f6c63430006040033",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.4+commit.1dca32f3\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[],\"name\":\"NoArgumentCalled\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"noArgument\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/TestContracts.sol\":\"NoArgument\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/TestContracts.sol\":{\"keccak256\":\"0x4f17680f1a7de54e9760fec6718f9ed78e4198bda0d734468b21ed54e6a66e31\",\"urls\":[\"bzz-raw://8184b007a58646427ce5a55b33c24df6a1eaca59dadd25716d3ece94646325ec\",\"dweb:/ipfs/QmQzFqpKFxYQCx9ETB96XsutEBAjazGCiaP9GqN9jwmqE5\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060998061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063568959ca14602d575b600080fd5b60336035565b005b7fc582abe1670c5a7f7cad8f171e4af03c793dd9f59fee6714179f56b6e9aea26f60405160405180910390a156fea2646970667358221220cebb675afc85a2955b3c95f50c8c13154263d717c838066abc3e49f546aa11ac64736f6c63430006040033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063568959ca14602d575b600080fd5b60336035565b005b7fc582abe1670c5a7f7cad8f171e4af03c793dd9f59fee6714179f56b6e9aea26f60405160405180910390a156fea2646970667358221220cebb675afc85a2955b3c95f50c8c13154263d717c838066abc3e49f546aa11ac64736f6c63430006040033",
   "sourceMap": "24:130:6:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;24:130:6;;;;;;;",
   "deployedSourceMap": "24:130:6:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;24:130:6;;;;;;;;;;;;;;;;12:1:-1;9;2:12;81:71:6;;;:::i;:::-;;;127:18;;;;;;;;;;81:71::o",
   "source": "pragma solidity 0.6.4;\n\ncontract NoArgument {\n    event NoArgumentCalled();\n\n    function noArgument() external {\n        emit NoArgumentCalled();\n    }\n}\n\ncontract OneArgument {\n    event OneArgumentCalled(uint256 indexed argumentOne);\n\n    function oneArgument(uint256 argumentOne) external {\n        emit OneArgumentCalled(argumentOne);\n    }\n}\n\ncontract TwoArguments {\n    event TwoArgumentsCalled(address[] argumentOne, bytes4 argumentTwo);\n\n    function twoArguments(address[] calldata argumentOne, bytes4 argumentTwo) external {\n        emit TwoArgumentsCalled(argumentOne, argumentTwo);\n    }\n}\n\ncontract ThreeArguments {\n    event ThreeArgumentsCalled(string argumentOne, int8 argumentTwo, bool argumentThree);\n\n    function threeArguments(string calldata argumentOne, int8 argumentTwo, bool argumentThree) external {\n        emit ThreeArgumentsCalled(argumentOne, argumentTwo, argumentThree);\n    }\n}\n",
-  "sourcePath": "/home/saadjhk/Desktop/chainbridge-solidity/contracts/TestContracts.sol",
+  "sourcePath": "/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/TestContracts.sol",
   "ast": {
-    "absolutePath": "/home/saadjhk/Desktop/chainbridge-solidity/contracts/TestContracts.sol",
+    "absolutePath": "/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/TestContracts.sol",
     "exportedSymbols": {
       "NoArgument": [
         1722
@@ -934,7 +934,7 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/home/saadjhk/Desktop/chainbridge-solidity/contracts/TestContracts.sol",
+      "absolutePath": "/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/TestContracts.sol",
       "exportedSymbols": {
         "NoArgument": [
           1722
@@ -1983,8 +1983,8 @@
     "version": "0.6.4+commit.1dca32f3.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.3.3",
-  "updatedAt": "2021-04-22T06:05:54.780Z",
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-05-17T11:21:10.706Z",
   "devdoc": {
     "methods": {}
   },

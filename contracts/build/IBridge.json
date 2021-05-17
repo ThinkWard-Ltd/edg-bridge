@@ -15,15 +15,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.4+commit.1dca32f3\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"_chainID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"ChainSafe Systems.\",\"methods\":{},\"title\":\"Interface for Bridge contract.\"},\"userdoc\":{\"methods\":{\"_chainID()\":{\"notice\":\"Exposing getter for {_chainID} instead of forcing the use of call.\"}}}},\"settings\":{\"compilationTarget\":{\"/home/saadjhk/Desktop/chainbridge-solidity/contracts/interfaces/IBridge.sol\":\"IBridge\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/saadjhk/Desktop/chainbridge-solidity/contracts/interfaces/IBridge.sol\":{\"keccak256\":\"0x69acbf5e85d70afb39f819efa08ff2442e8b122f35a012f6e37ed96fb35222b6\",\"urls\":[\"bzz-raw://02c37de0e9beefc6cf988b43980aaee9f68b2b60b34cc889aa374aeee135c13c\",\"dweb:/ipfs/QmVZFyHbMq8KgMyboAspK1VK25kR2uXv6x6t6nh5dfERHF\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.4+commit.1dca32f3\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"_chainID\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"ChainSafe Systems.\",\"methods\":{},\"title\":\"Interface for Bridge contract.\"},\"userdoc\":{\"methods\":{\"_chainID()\":{\"notice\":\"Exposing getter for {_chainID} instead of forcing the use of call.\"}}}},\"settings\":{\"compilationTarget\":{\"/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/interfaces/IBridge.sol\":\"IBridge\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/interfaces/IBridge.sol\":{\"keccak256\":\"0x69acbf5e85d70afb39f819efa08ff2442e8b122f35a012f6e37ed96fb35222b6\",\"urls\":[\"bzz-raw://02c37de0e9beefc6cf988b43980aaee9f68b2b60b34cc889aa374aeee135c13c\",\"dweb:/ipfs/QmVZFyHbMq8KgMyboAspK1VK25kR2uXv6x6t6nh5dfERHF\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity 0.6.4;\n\n/**\n    @title Interface for Bridge contract.\n    @author ChainSafe Systems.\n */\ninterface IBridge {\n    /**\n        @notice Exposing getter for {_chainID} instead of forcing the use of call.\n        @return uint8 The {_chainID} that is currently set for the Bridge contract.\n     */\n    function _chainID() external returns (uint8);\n}",
-  "sourcePath": "/home/saadjhk/Desktop/chainbridge-solidity/contracts/interfaces/IBridge.sol",
+  "sourcePath": "/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/interfaces/IBridge.sol",
   "ast": {
-    "absolutePath": "/home/saadjhk/Desktop/chainbridge-solidity/contracts/interfaces/IBridge.sol",
+    "absolutePath": "/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/interfaces/IBridge.sol",
     "exportedSymbols": {
       "IBridge": [
         2919
@@ -132,7 +132,7 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/home/saadjhk/Desktop/chainbridge-solidity/contracts/interfaces/IBridge.sol",
+      "absolutePath": "/home/saadjhk/Desktop/EdgewareBridge/chainbridge-solidity/contracts/interfaces/IBridge.sol",
       "exportedSymbols": {
         "IBridge": [
           2919
@@ -269,8 +269,8 @@
     "version": "0.6.4+commit.1dca32f3.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.3.3",
-  "updatedAt": "2021-04-22T06:05:54.804Z",
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-05-17T11:21:10.789Z",
   "devdoc": {
     "author": "ChainSafe Systems.",
     "methods": {},
