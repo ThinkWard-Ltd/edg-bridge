@@ -90,8 +90,7 @@ Copmplete setting up the relayer config using setup relayer section and run ```y
 Complete setting up the relayer config using setup relayer section and run ```yarn install-service```.
 
 ## Mintable Token deployment
-1. To deploy a mintable token on the destination side of the bridge, create a file called ```factory``` and set the following
-variables in it
+1. To deploy a mintable token on the destination side of the bridge, create a file called ```factory``` and copy and update the following variables in it
 ```bash
 RPC_URL=
 CHAIN_ID=
@@ -108,6 +107,28 @@ MULTISIG_ADDRESS=
 node index.js createToken --rpcUrl $RPC_URL --privateKey $PRIVATE_KEY --factoryAddress $FACTORY_ADDRESS --chainId $CHAIN_ID --tokenName $TOKEN_NAME --tokenSymbol $TOKEN_SYMBOL --tokenDecimals $TOKEN_DECIMALS --multiSigAddress $MULTISIG_ADDRESS
 ```
 
+## Token Transfer
+1. To initiate a transfer using cli on an existing bridge, create a file called ```transfer``` and copy and update the following variables in it
+```bash
+RPC_URL=
+PRIVATE_KEY=
+ETH_CHAIN_ID=
+BRIDGE_ADDR=
+ERC20_ADDR=
+RECIPIENT=
+AMOUNT=
+DECIMALS=
+RES_ID=
+HANDLER_ADDR=
+DEST_CHAIN_ID=
+GAS_PRICE=
+GAS_LIMIT=
+```
+2. Run ```set -a;. transfer;set +a```
+3. Finally
+```bash
+node index.js transferTokens --rpcUrl $RPC_URL --privateKey $PRIVATE_KEY --ethChainId $ETH_CHAIN_ID --bridgeAddress $BRIDGE_ADDR --erc20Address $ERC20_ADDR --recipient $RECIPIENT --amount $AMOUNT --decimals $DECIMALS --resourceId $RES_ID --handlerAddress $HANDLER_ADDR --destinationChainBridgeChainId $DEST_CHAIN_ID --gasPrice $GAS_PRICE --gasLimit $GAS_LIMIT
+```
 This will create a mintable token using the private key provided and assign its ownership to
 multi sig address.
 ##  Token Transfers

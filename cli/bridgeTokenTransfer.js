@@ -1,10 +1,6 @@
-const ethers = require("ethers");
-const fs = require('fs');
-const { ContractABIs } = require("../constants");
-const { getWalletAndProvider, waitForTx, buildDepositParams, expandDecimals } = require("../utils");
+const { getWalletAndProvider, buildDepositParams, expandDecimals } = require("../utils");
 const { erc20Approve, bridgeDeposit } = require('../interactions');
 const commander = require('commander');
-
 
 async function depositViaBridge(args) {
     try {
@@ -31,7 +27,7 @@ async function depositViaBridge(args) {
     }
 }
 
-exports.initiateDeposit = new commander.Command("initiateDeposit")
+exports.bridgeTokenTransfer = new commander.Command("bridgeTokenTransfer")
     .option('--rpcUrl <rpcUrl>')
     .option('--privateKey <privateKey>')
     .option('--ethChainId <ethChainId>')
