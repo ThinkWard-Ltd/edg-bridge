@@ -129,5 +129,3 @@ GAS_LIMIT=
 ```bash
 node index.js transferTokens --rpcUrl $RPC_URL --privateKey $PRIVATE_KEY --ethChainId $ETH_CHAIN_ID --bridgeAddress $BRIDGE_ADDR --erc20Address $ERC20_ADDR --recipient $RECIPIENT --amount $AMOUNT --decimals $DECIMALS --resourceId $RES_ID --handlerAddress $HANDLER_ADDR --destinationChainBridgeChainId $DEST_CHAIN_ID --gasPrice $GAS_PRICE --gasLimit $GAS_LIMIT
 ```
-This will create a mintable token using the private key provided and assign its ownership to
-multi sig address.
