@@ -28,7 +28,7 @@ exports.expandDecimals = function (amount, decimals = 18) {
     return ethers.utils.parseUnits(String(amount), decimals);
 }
 
-exports.createChainConfig = function (chainName, chainId, bridgeAddress, erc20handlerAddress, gasLimit = 8000000, gasPrice = 100000000000, endpoint = '', relayerAddress = '') {
+exports.createChainConfig = function (chainName, chainId, bridgeAddress, erc20handlerAddress, gasLimit = 8000000, gasPrice = 100000000000, endpoint = '', relayerAddress = '', factoryAddress = '') {
     let chainConfig = {
         endpoint,
         from: relayerAddress,
@@ -44,6 +44,7 @@ exports.createChainConfig = function (chainName, chainId, bridgeAddress, erc20ha
         }
     }
 
+    if (factoryAddress.length) chainConfig['factory'] = factoryAddress;
     if (endpoint.length && endpoint.startsWith('http')) chainConfig.opts['http'] = 'true';
     return chainConfig;
 }
@@ -62,18 +63,6 @@ exports.publishRelayerConfiguration = function (relayerConfig) {
     let fileName = `bridge-${relayerConfig.chains[0].name}-${relayerConfig.chains[1].name}-${Date.now()}.json`;
     fs.writeFileSync(publishPath + fileName, JSON.stringify(relayerConfig), 'utf-8');
     return fileName;
-}
-
-exports.createRelayerConfig = function(chain1Config, chain2Config, srcFactory, destFactory) {
-    let factories = {
-        [chain1Config.id]: srcFactory,
-        [chain2Config.id]: destFactory
-    };
-
-    return {
-        chains: [chain1Config, chain2Config],
-        factories
-    }
 }
 
 const expandDecimals = function (amount, decimals = 18) {

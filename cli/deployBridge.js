@@ -2,7 +2,7 @@ const commander = require('commander');
 const path = require('path');
 
 const { DEST_CHAIN_DEFAULT_ID, SRC_CHAIN_DEFAULT_ID } = require("../constants");
-const { getWalletAndProvider, createChainConfig, publishRelayerConfiguration, createRelayerConfig } = require("../utils");
+const { getWalletAndProvider, createChainConfig, publishRelayerConfiguration } = require("../utils");
 const { deployBridgeContract, deployERC20Handler, deployCloneableERC20, deployMintableCoinFactory } = require("../deployers");
 const { setCloneableCoinAddress, revokeGrantERC20Role, renounceBridgeAdmin } = require("../interactions");
 
@@ -68,7 +68,10 @@ exports.deployBridge = new commander.Command("deployBridge")
                 SGAS_LIMIT,
                 SGAS_PRICE,
                 process.env.SRC_CHAIN_RPC_WS.length ? process.env.SRC_CHAIN_RPC_WS : process.env.SRC_CHAIN_RPC_HTTPS,
-                undefined);
+                undefined,
+                srcMintableCoinFactoryAddress
+            );
+
             let dstBridgeConfig = createChainConfig(process.env.DEST_CHAIN_NAME,
                 DEST_CHAIN_DEFAULT_ID.toString(),
                 destBridgeAddress,
@@ -76,11 +79,11 @@ exports.deployBridge = new commander.Command("deployBridge")
                 DGAS_LIMIT,
                 DGAS_PRICE,
                 process.env.DEST_CHAIN_RPC_WS.length ? process.env.DEST_CHAIN_RPC_WS : process.env.DEST_CHAIN_RPC_HTTPS,
-                undefined
+                undefined,
+                dstMintableCoinFactoryAddress
             )
 
-            let relayerConfig = createRelayerConfig(srcBridgeConfig, dstBridgeConfig, srcMintableCoinFactoryAddress, dstMintableCoinFactoryAddress);
-            let fileName = publishRelayerConfiguration(relayerConfig);
+            let fileName = publishRelayerConfiguration({ chains: [srcBridgeConfig, dstBridgeConfig] });
             console.log(`⚙️  ${fileName} created to run as the first relayer!`);
 
         } catch (err) {

@@ -48,7 +48,8 @@ exports.deployBridgeSingleSide = new commander.Command("deployBridgeSingleSide")
                 GAS_LIMIT,
                 GAS_PRICE,
                 process.env.CHAIN_RPC_WS.length ? process.env.CHAIN_RPC_WS : process.env.CHAIN_RPC,
-                undefined);
+                undefined,
+                mintableCoinFactoryAddress);
 
             const deploymentFile = publishChainConfiguration(chainBridgeConfig);
             console.log(`Chainbridge contracts deployed and configuration written to publish/${deploymentFile}`);
