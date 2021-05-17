@@ -44,7 +44,7 @@ exports.createChainConfig = function (chainName, chainId, bridgeAddress, erc20ha
         }
     }
 
-    if (factoryAddress.length) chainConfig['factory'] = factoryAddress;
+    if (factoryAddress.length) chainConfig['erc20factory'] = factoryAddress;
     if (endpoint.length && endpoint.startsWith('http')) chainConfig.opts['http'] = 'true';
     return chainConfig;
 }
