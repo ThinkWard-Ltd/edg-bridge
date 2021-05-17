@@ -4,9 +4,9 @@ const commander = require('commander');
 
 async function depositViaBridge(args) {
     try {
-        let { chainProvider, chainWallet } = getWalletAndProvider(args.rpcUrl, args.privateKey, args.ethChainId, Number(args.gasPrice), Number(args.gasLimit));
+        let { chainProvider, chainWallet } = getWalletAndProvider(args.rpcUrl, args.privateKey, Number(args.ethChainId));
     
-        await erc20Approve(args.erc20Address, args.handlerAddress, Number(args.decimals), Number(args.amount), chainProvider, chainWallet);
+        await erc20Approve(args.erc20Address, args.handlerAddress, Number(args.decimals), Number(args.amount), chainProvider, chainWallet, Number(args.gasPrice), Number(args.gasLimit));
         const depositParams = buildDepositParams(args.recipient, Number(args.amount), Number(args.decimals));
 
         console.log(`

@@ -127,5 +127,5 @@ GAS_LIMIT=
 2. Run ```set -a;. transfer;set +a```
 3. Finally
 ```bash
-node index.js transferTokens --rpcUrl $RPC_URL --privateKey $PRIVATE_KEY --ethChainId $ETH_CHAIN_ID --bridgeAddress $BRIDGE_ADDR --erc20Address $ERC20_ADDR --recipient $RECIPIENT --amount $AMOUNT --decimals $DECIMALS --resourceId $RES_ID --handlerAddress $HANDLER_ADDR --destinationChainBridgeChainId $DEST_CHAIN_ID --gasPrice $GAS_PRICE --gasLimit $GAS_LIMIT
+node index.js bridgeTokenTransfer --rpcUrl $RPC_URL --privateKey $PRIVATE_KEY --ethChainId $ETH_CHAIN_ID --bridgeAddress $BRIDGE_ADDR --erc20Address $ERC20_ADDR --recipient $RECIPIENT --amount $AMOUNT --decimals $DECIMALS --resourceId $RES_ID --handlerAddress $HANDLER_ADDR --destinationChainBridgeChainId $DEST_CHAIN_ID --gasPrice $GAS_PRICE --gasLimit $GAS_LIMIT
 ```

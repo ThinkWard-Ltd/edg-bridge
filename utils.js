@@ -76,7 +76,7 @@ exports.createRelayerConfig = function(chain1Config, chain2Config, srcFactory, d
     }
 }
 
-exports.expandDecimals = function (amount, decimals = 18) {
+const expandDecimals = function (amount, decimals = 18) {
     return ethers.utils.parseUnits(String(amount), decimals);
 }
 
@@ -86,3 +86,5 @@ exports.buildDepositParams = function (recipient, amount, decimals) {
         ethers.utils.hexZeroPad(ethers.utils.hexlify((recipient.length - 2)/2), 32).substr(2) +
         recipient.substr(2)
 }
+
+exports.expandDecimals = expandDecimals;
