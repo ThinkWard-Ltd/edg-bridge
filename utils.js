@@ -99,8 +99,24 @@ exports.publishRelayerConfiguration = function (relayerConfig) {
 }
 
 exports.createRelayerConfig = function(chain1Config, chain2Config, srcFactory, destFactory) {
+    let factories = {
+        [chain1Config.id]: srcFactory,
+        [chain2Config.id]: destFactory
+    };
+
     return {
         chains: [chain1Config, chain2Config],
-        factories: [srcFactory, destFactory]
+        factories
     }
+}
+
+exports.expandDecimals = function (amount, decimals = 18) {
+    return ethers.utils.parseUnits(String(amount), decimals);
+}
+
+exports.buildDepositParams = function (recipient, amount, decimals) {
+    return '0x' +
+        ethers.utils.hexZeroPad(ethers.utils.bigNumberify(expandDecimals(amount, decimals)).toHexString(), 32).substr(2) +
+        ethers.utils.hexZeroPad(ethers.utils.hexlify((recipient.length - 2)/2), 32).substr(2) +
+        recipient.substr(2)
 }

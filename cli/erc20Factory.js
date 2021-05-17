@@ -1,7 +1,7 @@
 const commander = require('commander');
 
 const ethers = require("ethers");
-const { ContractABIs } = require("../constants");
+const { ContractABIs, GAS_LIMIT, GAS_PRICE } = require("../constants");
 const { getWalletAndProvider, waitForTx } = require("../utils");
 
 async function createERC20ViaFactory(
@@ -31,9 +31,9 @@ async function createERC20ViaFactory(
 
                 const erc20Cloneable = new ethers.Contract(`0x${newCreatedAddress}`, ContractABIs.CloneableMintableERC20.abi, chainWallet);
                 // role, account (0x0000000000000000000000000000000000000000000000000000000000000000 is admin role)
-                let tx = await erc20Cloneable.grantRole("0x0000000000000000000000000000000000000000000000000000000000000000", multiSigAddress);
+                let tx = await erc20Cloneable.grantRole("0x0000000000000000000000000000000000000000000000000000000000000000", multiSigAddress, { gasPrice: GAS_PRICE, gasLimit: GAS_LIMIT});
                 await waitForTx(chainProvider, tx.hash);
-                tx = await erc20Cloneable.renounceRole("0x0000000000000000000000000000000000000000000000000000000000000000", originalOwner);
+                tx = await erc20Cloneable.renounceRole("0x0000000000000000000000000000000000000000000000000000000000000000", originalOwner, { gasPrice: GAS_PRICE, gasLimit: GAS_LIMIT});
                 await waitForTx(chainProvider, tx.hash);
 
                 const symbolName = await erc20Cloneable.name();
@@ -48,7 +48,7 @@ async function createERC20ViaFactory(
 
     try {
         const erc20Factory = new ethers.Contract(factoryAddress, ContractABIs.MintableCoinFactory.abi, chainWallet);
-        const tx = await erc20Factory.createERC20Mintable(tokenName, tokenSymbol, tokenDecimals);
+        const tx = await erc20Factory.createERC20Mintable(tokenName, tokenSymbol, tokenDecimals, { gasPrice: GAS_PRICE, gasLimit: GAS_LIMIT});
         await waitForTx(chainProvider, tx.hash);
     } catch (err) {
         console.log(err);

@@ -1,6 +1,6 @@
 const ethers = require("ethers");
 const { ContractABIs } = require("./constants");
-const { waitForTx } = require("./utils");
+const { waitForTx, expandDecimals } = require("./utils");
 
 exports.setCloneableCoinAddress = async function (factoryAddress, cloneableContractAddress, chainProvider, wallet) {
     console.log(`Setting Cloneable address on factory ${factoryAddress}`);
@@ -38,4 +38,17 @@ exports.renounceBridgeAdmin = async function(bridgeAddress, chainWallet, chainPr
     let tx = await bridgeInstance.renounceAdmin(multiSigAddress);
     await waitForTx(chainProvider, tx.hash);
     console.log(`Transferred ${chainName} bridge ownership to ${multiSigAddress}`);
+}
+
+exports.erc20Approve = async function(erc20Address, recipient, decimals, amount, chainProvider, chainWallet, gasPrice, gasLimit) {
+    const erc20Instance = new ethers.Contract(erc20Address, ContractABIs.Erc20Mintable.abi, chainWallet);
+    console.log(`Approving ${recipient} to spend ${amount} tokens!`);
+    let tx = await erc20Instance.approve(recipient, expandDecimals(amount, decimals), { gasPrice, gasLimit });
+    await waitForTx(chainProvider, tx.hash)
+}
+
+exports.bridgeDeposit = async function(bridgeAddress, depositParams, resourceId, destinationChainId, gasPrice, gasLimit, chainWallet, chainProvider) {
+    const bridgeInstance = new ethers.Contract(bridgeAddress, ContractABIs.Bridge.abi, chainWallet);
+    tx = await bridgeInstance.deposit(destinationChainId, resourceId, depositParams, { gasPrice, gasLimit });
+    await waitForTx(chainProvider, tx.hash);
 }
