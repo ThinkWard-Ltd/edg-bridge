@@ -131,9 +131,3 @@ node index.js transferTokens --rpcUrl $RPC_URL --privateKey $PRIVATE_KEY --ethCh
 ```
 This will create a mintable token using the private key provided and assign its ownership to
 multi sig address.
-##  Token Transfers
-
-To execute a transfer on either side of the bridge two calls are required.
-1. An **approve** call from ERC20 contract on source/destination bridge with address of handler contract deployed and configured on chain,
-2. A **deposit** call to the bridge should originate from the address that is willing to spend with first parameter being chainId (destination), resource id of the token that needs to be transferred, data is a concatenated byte value with first 32 byte is the amount of tokens to transfer which is padded to 32 bytes with extra 0s, 2nd being the length of recipient address also padded to 32 bytes and last part containing the actual recipient address.
-
