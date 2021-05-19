@@ -18,10 +18,10 @@ exports.revokeGrantERC20Role = async function (cloneableERC20Address, role, revo
     console.log(`Updating Role ${cloneableERC20Address}`);
     const cloneableERC20 = new ethers.Contract(cloneableERC20Address, ContractABIs.CloneableMintableERC20.abi, wallet);
     if (revoke) {
-        const tx = await cloneableERC20.renounceRole(roles[role], address);
+        const tx = await cloneableERC20.renounceRole(roles[role], address, { gasPrice: GAS_PRICE, gasLimit: GAS_LIMIT });
         await waitForTx(chainProvider, tx.hash);
     } else {
-        const tx = await cloneableERC20.grantRole(roles[role], address);
+        const tx = await cloneableERC20.grantRole(roles[role], address, { gasPrice: GAS_PRICE, gasLimit: GAS_LIMIT });
         await waitForTx(chainProvider, tx.hash);
     }
 }
