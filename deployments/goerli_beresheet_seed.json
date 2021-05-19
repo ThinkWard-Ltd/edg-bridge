@@ -7,9 +7,9 @@
             "type": "ethereum",
             "name": "Goerli",
             "opts": {
-                "bridge": "0xC7DfDEeC0b91D77B6723988C143647A420056911",
-                "erc20Handler": "0xC015A56e95a715A03828Cb61913590107d5d1d89",
-                "genericHandler": "0xC015A56e95a715A03828Cb61913590107d5d1d89",
+                "bridge": "0xc76F580799325aeFb97C40d46EE337855b1Bc5Bc",
+                "erc20Handler": "0xC3c52CAf0f9474DAC1833CB99D5f39a989AfDBEc",
+                "genericHandler": "0xC3c52CAf0f9474DAC1833CB99D5f39a989AfDBEc",
                 "gasLimit": "8000000",
                 "maxGasPrice": "100000000000",
                 "http": "true"
@@ -36,7 +36,7 @@
         "0xb05132a64B0052872807e5656245E84D58026099"
     ],
     "resources": {
-        "0x0000000000000000000000514910771af9ca656af840dff83e8264ecf986ca00": {
+        "0000000000000000000000000d3d43917db95064e652c866ebf3226fab455200": {
             "0":"0x76D60f8eC8a1A7adccE74915394644C589fB12f6",
             "2":"0xd3b59ced0ce1e8ecd3f0c2301603021382c88366"
         }
