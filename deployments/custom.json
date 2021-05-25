@@ -17,7 +17,7 @@
             "erc20factory": "0xf83602486ea7D0A602D335851dCaF59c9FC41A3d"
         },
         {
-            "endpoint": "/",
+            "endpoint": "",
             "from": "",
             "id": "1",
             "type": "ethereum",
