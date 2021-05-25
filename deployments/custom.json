@@ -7,14 +7,14 @@
             "type": "ethereum",
             "name": "Geth",
             "opts": {
-                "bridge": "0xe4F6278E2554E29A187BDABeBe8D46335Df5dC2a",
-                "erc20Handler": "0x879B871031bC849AfA6ee9cEe2a258df05EAbc77",
-                "genericHandler": "0x879B871031bC849AfA6ee9cEe2a258df05EAbc77",
+                "bridge": "0xacA2b3B057d78f04129297A0f527708848293c4C",
+                "erc20Handler": "0x687350E064Bb23014f3EC7F8Ab7E38d2FCC84f5B",
+                "genericHandler": "0x687350E064Bb23014f3EC7F8Ab7E38d2FCC84f5B",
                 "gasLimit": "8000000",
                 "maxGasPrice": "100000000",
                 "http": "true"
             },
-            "erc20factory": "0xf83602486ea7D0A602D335851dCaF59c9FC41A3d"
+            "erc20factory": "0x30AB903d989BBFaa9a9D4E5994CA88f76d686915"
         },
         {
             "endpoint": "",
