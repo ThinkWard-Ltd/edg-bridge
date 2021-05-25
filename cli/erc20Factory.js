@@ -12,7 +12,7 @@ async function createERC20ViaFactory(
     tokenName,
     tokenSymbol,
     tokenDecimals,
-    multiSigAddress) {
+    ercHandlerAddress) {
     const { chainProvider, chainWallet } = getWalletAndProvider(rpcUrl, privateKey, chainId);
     const filter = {
         address: factoryAddress,
@@ -21,23 +21,22 @@ async function createERC20ViaFactory(
         ]
     }
 
-    if (multiSigAddress.length) {
+    if (ercHandlerAddress.length) {
         chainProvider.on(filter, async topicData => {
             try {
-                // get data key from topic data
                 const newCreatedAddress = topicData.data.slice(26);
-                console.log(`Token Created: 0x${newCreatedAddress}`);
                 const originalOwner = await chainWallet.getAddress();
 
                 const erc20Cloneable = new ethers.Contract(`0x${newCreatedAddress}`, ContractABIs.CloneableMintableERC20.abi, chainWallet);
-                // role, account (0x0000000000000000000000000000000000000000000000000000000000000000 is admin role)
-                let tx = await erc20Cloneable.grantRole("0x0000000000000000000000000000000000000000000000000000000000000000", multiSigAddress, { gasPrice: GAS_PRICE, gasLimit: GAS_LIMIT});
+
+                let tx = await erc20Cloneable.grantRole("0x9f2df0fed2c77648de5860a4cc508cd0818c85b8b8a1ab4ceeef8d981c8956a6", ercHandlerAddress, { gasPrice: GAS_PRICE, gasLimit: GAS_LIMIT});
                 await waitForTx(chainProvider, tx.hash);
+
                 tx = await erc20Cloneable.renounceRole("0x0000000000000000000000000000000000000000000000000000000000000000", originalOwner, { gasPrice: GAS_PRICE, gasLimit: GAS_LIMIT});
                 await waitForTx(chainProvider, tx.hash);
 
-                const symbolName = await erc20Cloneable.name();
-                console.log(`${symbolName} deployed at 0x${newCreatedAddress}, and transferred ownership to ${multiSigAddress}`);
+                const ercName = await erc20Cloneable.name();
+                console.log(`${ercName} deployed at 0x${newCreatedAddress}`);
                 process.exit(1);
             } catch (err) {
                 console.log(err);
@@ -64,7 +63,7 @@ exports.createToken = new commander.Command("createToken")
     .option('--tokenName <tokenName>')
     .option('--tokenSymbol <tokenSymbol>')
     .option('--tokenDecimals <tokenDecimals>')
-    .option('--multiSigAddress <multiSigAddress>')
+    .option('--ercHandlerAddress <ercHandlerAddress>')
     .action(async function(args) {
         await createERC20ViaFactory(
             args.rpcUrl,
@@ -74,5 +73,5 @@ exports.createToken = new commander.Command("createToken")
             args.tokenName,
             args.tokenSymbol,
             Number(args.tokenDecimals),
-            args.multiSigAddress);
+            args.ercHandlerAddress);
     });

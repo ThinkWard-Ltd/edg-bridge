@@ -1,5 +1,5 @@
 const ethers = require("ethers");
-const { ContractABIs } = require("./constants");
+const { ContractABIs, GAS_PRICE, GAS_LIMIT } = require("./constants");
 const { waitForTx, expandDecimals } = require("./utils");
 
 exports.setCloneableCoinAddress = async function (factoryAddress, cloneableContractAddress, chainProvider, wallet) {

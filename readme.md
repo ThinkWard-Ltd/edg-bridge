@@ -97,12 +97,12 @@ FACTORY_ADDRESS=
 TOKEN_NAME=
 TOKEN_SYMBOL=
 TOKEN_DECIMALS=
-MULTISIG_ADDRESS=
+HANDLER_ADDR=
 ```
 2. Run ```set -a;. factory;set +a```
 3. Finally
 ```bash
-node index.js createToken --rpcUrl $RPC_URL --privateKey $PRIVATE_KEY --factoryAddress $FACTORY_ADDRESS --chainId $CHAIN_ID --tokenName $TOKEN_NAME --tokenSymbol $TOKEN_SYMBOL --tokenDecimals $TOKEN_DECIMALS --multiSigAddress $MULTISIG_ADDRESS
+node index.js createToken --rpcUrl $RPC_URL --privateKey $PRIVATE_KEY --factoryAddress $FACTORY_ADDRESS --chainId $CHAIN_ID --tokenName $TOKEN_NAME --tokenSymbol $TOKEN_SYMBOL --tokenDecimals $TOKEN_DECIMALS --ercHandlerAddress $HANDLER_ADDR
 ```
 
 ## Token Transfer

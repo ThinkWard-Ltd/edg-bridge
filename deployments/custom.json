@@ -1,0 +1,36 @@
+{
+    "chains": [
+        {
+            "endpoint": "",
+            "from": "",
+            "id": "0",
+            "type": "ethereum",
+            "name": "Geth",
+            "opts": {
+                "bridge": "0xe4F6278E2554E29A187BDABeBe8D46335Df5dC2a",
+                "erc20Handler": "0x879B871031bC849AfA6ee9cEe2a258df05EAbc77",
+                "genericHandler": "0x879B871031bC849AfA6ee9cEe2a258df05EAbc77",
+                "gasLimit": "8000000",
+                "maxGasPrice": "100000000",
+                "http": "true"
+            },
+            "erc20factory": "0xf83602486ea7D0A602D335851dCaF59c9FC41A3d"
+        },
+        {
+            "endpoint": "/",
+            "from": "",
+            "id": "1",
+            "type": "ethereum",
+            "name": "BeresheetLocal",
+            "opts": {
+                "bridge": "0x73b647cbA2FE75Ba05B8e12ef8F8D6327D6367bF",
+                "erc20Handler": "0x7d73424a8256C0b2BA245e5d5a3De8820E45F390",
+                "genericHandler": "0x7d73424a8256C0b2BA245e5d5a3De8820E45F390",
+                "gasLimit": "8000000",
+                "maxGasPrice": "100000000",
+                "http": "true"
+            },
+            "erc20factory": "0x08425D9Df219f93d5763c3e85204cb5B4cE33aAa"
+        }
+    ]
+}
