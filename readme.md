@@ -105,6 +105,21 @@ HANDLER_ADDR=
 node index.js createToken --rpcUrl $RPC_URL --privateKey $PRIVATE_KEY --factoryAddress $FACTORY_ADDRESS --chainId $CHAIN_ID --tokenName $TOKEN_NAME --tokenSymbol $TOKEN_SYMBOL --tokenDecimals $TOKEN_DECIMALS --ercHandlerAddress $HANDLER_ADDR
 ```
 
+## Mint Tokens
+1. Create file mint
+```bash
+AMOUNT=
+ERC20ADDR=
+RPC_URL=
+PRIVATE_KEY=
+CHAIN_ID=
+```
+2. Run ```set -a;. mint;set +a```
+3. Finally
+```bash
+node index.js mintTokens --rpcUrl $RPC_URL --privateKey $PRIVATE_KEY --erc20Addr $ERC20ADDR --chainId $CHAIN_ID --amount $AMOUNT
+```
+
 ## Token Transfer
 1. To initiate a transfer using cli on an existing bridge, create a file called ```transfer``` and copy and update the following variables in it
 ```bash

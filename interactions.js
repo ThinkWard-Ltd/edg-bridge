@@ -52,3 +52,10 @@ exports.bridgeDeposit = async function(bridgeAddress, depositParams, resourceId,
     tx = await bridgeInstance.deposit(destinationChainId, resourceId, depositParams, { gasPrice, gasLimit });
     await waitForTx(chainProvider, tx.hash);
 }
+
+exports.erc20Mint = async function(amount, erc20Address, chainWallet, chainProvider) {
+    console.log(`Minting ${amount} tokens!`);
+    const erc20Instance = new ethers.Contract(erc20Address, ContractABIs.CustomToken.abi, chainWallet);
+    let tx = await erc20Instance.mint(amount, { gasPrice: GAS_PRICE, gasLimit: GAS_LIMIT });
+    await waitForTx(chainProvider, tx.hash);
+}
