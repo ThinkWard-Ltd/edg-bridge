@@ -1,7 +1,7 @@
 {
     "chains": [
         {
-            "endpoint": "",
+            "endpoint": "http://3.238.192.68:5337",
             "from": "",
             "id": "0",
             "type": "ethereum",
@@ -17,7 +17,7 @@
             "erc20factory": "0x30AB903d989BBFaa9a9D4E5994CA88f76d686915"
         },
         {
-            "endpoint": "",
+            "endpoint": "http://3.235.188.119:9933",
             "from": "",
             "id": "1",
             "type": "ethereum",
