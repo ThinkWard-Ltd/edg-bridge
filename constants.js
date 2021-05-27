@@ -1,7 +1,5 @@
 const path = require('path');
 
-exports.SRC_CHAIN_DEFAULT_ID = 0;
-exports.DEST_CHAIN_DEFAULT_ID = 1;
 exports.GAS_PRICE = 100000000000;
 exports.GAS_LIMIT = 8000000;
 

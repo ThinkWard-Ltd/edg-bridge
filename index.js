@@ -1,7 +1,6 @@
 const commander = require('commander');
 
-const { deployBridge } = require('./cli/deployBridge');
-const { deployBridgeSingleSide } = require('./cli/deployBridgeSingleSide');
+const { deployBridge } = require('./cli/deploy');
 const { setupRelayer } = require('./cli/relayer');
 const { createToken, mintTokens } = require('./cli/erc20');
 const { bridgeTokenTransfer } = require('./cli/bridgeTokenTransfer');
@@ -10,7 +9,6 @@ let program = new commander.Command();
 program.addCommand(createToken);
 program.addCommand(mintTokens);
 program.addCommand(deployBridge);
-program.addCommand(deployBridgeSingleSide);
 program.addCommand(bridgeTokenTransfer);
 program.addCommand(setupRelayer);
 

@@ -59,3 +59,47 @@ exports.erc20Mint = async function(amount, erc20Address, chainWallet, chainProvi
     let tx = await erc20Instance.mint(amount, { gasPrice: GAS_PRICE, gasLimit: GAS_LIMIT });
     await waitForTx(chainProvider, tx.hash);
 }
+
+
+exports.createERC20ViaFactory = async function (factoryAddress, tokenName, tokenSymbol, tokenDecimals, ercHandlerAddress, chainWallet, chainProvider) {
+
+    const filter = {
+        address: factoryAddress,
+        topics: [
+            ethers.utils.id("MintableERC20Created(address)")
+        ]
+    }
+
+    if (ercHandlerAddress.length) {
+        chainProvider.on(filter, async topicData => {
+            try {
+                const newCreatedAddress = topicData.data.slice(26);
+                const originalOwner = await chainWallet.getAddress();
+
+                const erc20Cloneable = new ethers.Contract(`0x${newCreatedAddress}`, ContractABIs.CloneableMintableERC20.abi, chainWallet);
+
+                let tx = await erc20Cloneable.grantRole("0x9f2df0fed2c77648de5860a4cc508cd0818c85b8b8a1ab4ceeef8d981c8956a6", ercHandlerAddress, { gasPrice: GAS_PRICE, gasLimit: GAS_LIMIT});
+                await waitForTx(chainProvider, tx.hash);
+
+                tx = await erc20Cloneable.renounceRole("0x0000000000000000000000000000000000000000000000000000000000000000", originalOwner, { gasPrice: GAS_PRICE, gasLimit: GAS_LIMIT});
+                await waitForTx(chainProvider, tx.hash);
+
+                const ercName = await erc20Cloneable.name();
+                console.log(`${ercName} deployed at 0x${newCreatedAddress}`);
+                process.exit(1);
+            } catch (err) {
+                console.log(err);
+                process.exit(1);
+            }
+        });
+    }
+
+    try {
+        const erc20Factory = new ethers.Contract(factoryAddress, ContractABIs.MintableCoinFactory.abi, chainWallet);
+        const tx = await erc20Factory.createERC20Mintable(tokenName, tokenSymbol, tokenDecimals, { gasPrice: GAS_PRICE, gasLimit: GAS_LIMIT});
+        await waitForTx(chainProvider, tx.hash);
+    } catch (err) {
+        console.log(err);
+        process.exit(1);
+    }
+}

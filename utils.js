@@ -60,7 +60,7 @@ exports.publishChainConfiguration = function (chainConfig) {
 exports.publishRelayerConfiguration = function (relayerConfig) {
     let publishPath = path.join(__dirname, './publish/');
     if (!fs.existsSync(publishPath)) fs.mkdirSync(publishPath);
-    let fileName = `bridge-${relayerConfig.chains[0].name}-${relayerConfig.chains[1].name}-${Date.now()}.json`;
+    let fileName = `bridge-${Date.now()}.json`;
     fs.writeFileSync(publishPath + fileName, JSON.stringify(relayerConfig), 'utf-8');
     return fileName;
 }
