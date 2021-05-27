@@ -82,10 +82,7 @@ KEYSTORE_PASSWORD=
 **Note:** If the scripts fail to run due to permission errors, please provide execution permission to all the files in the scripts folder.
 
 ## Start Relayer
-Copmplete setting up the relayer config using setup relayer section and run ```yarn start-relayer```.
-
-## Install Service
-Complete setting up the relayer config using setup relayer section and run ```yarn install-service```.
+Copmplete setting up the relayer config using setup relayer section and run ```yarn start-relayer```, if you want to run relayer in a docker container run previous command with ```-e docker```.
 
 ## Mintable Token deployment
 1. To deploy a mintable token on the destination side of the bridge, create a file called ```factory``` and copy and update the following variables in it
