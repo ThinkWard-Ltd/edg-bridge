@@ -143,7 +143,7 @@ If prompted for password, enter your system user password.
 
 ## Deploying a Bridge
 
-Note we have already deployed a Goerli <> Beresheet TestNet Bridge, use the following steps if you'd like to deploy the required contracts for another bridge. 
+Note we have already deployed a Goerli <> Beresheet TestNet Bridge, use the following steps if you'd like to deploy the required contracts for another bridge (EVM chains only). 
 
 1. Start by renaming `deploy.env.example` to `deploy.env` (`/env` directory) and setting the following variables:
 
