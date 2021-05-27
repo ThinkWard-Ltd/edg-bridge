@@ -7,10 +7,8 @@
   "license": "MIT",
   "scripts": {
     "setup-relayer": "node index.js setupRelayer && ./scripts/setupKeyStore.sh",
-    "start-relayer": "./scripts/startRelayer.sh",
-    "install-service": "sudo ./scripts/installService.sh",
-    "run-docker": "./scripts/runDocker.sh",
-    "deploy-bridge": "node index.js deployBridge"
+    "start-relayer": "./scripts/relayer.sh",
+    "deploy": "node index.js deployChainbridge"
   },
   "dependencies": {
     "@openzeppelin/contracts": "3.0.0",
