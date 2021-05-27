@@ -135,7 +135,7 @@ To become a relayer on the deployed Goerli <> Beresheet TestNet Bridge please op
 
 ### Start Relayer / Relayer Service
 
-After setting up the relayer, you can run `yarn start-relayer`. Alternatively, you can run the relayer in a Docker container,  `yarn run-docker`. The container restarts itself if it incurs any errors. 
+After setting up the relayer, you can run `yarn start-relayer`. Alternatively, you can run the relayer in a Docker container,  `yarn start-relayer -e docker`. The container restarts itself if it incurs any errors. 
 
 If prompted for password, enter your system user password.
 
@@ -145,7 +145,7 @@ If prompted for password, enter your system user password.
 
 Note we have already deployed a Goerli <> Beresheet TestNet Bridge, use the following steps if you'd like to deploy the required contracts for another bridge. 
 
-1. Start by renaming `deployBridge.env.example` to `deployBridge.env` (`/env` directory) and setting the following variables:
+1. Start by renaming `deploy.env.example` to `deploy.env` (`/env` directory) and setting the following variables:
 
     ```
     SRC_CHAIN_NETWORK_ID=
@@ -156,7 +156,6 @@ Note we have already deployed a Goerli <> Beresheet TestNet Bridge, use the foll
     SGAS_LIMIT=
     SGAS_PRICE=
     # multi sig and ws endpoints are optional
-    SRC_CHAIN_RPC_WS=
     SRC_MULTISIG=
 
     DEST_CHAIN_NETWORK_ID=
@@ -167,7 +166,6 @@ Note we have already deployed a Goerli <> Beresheet TestNet Bridge, use the foll
     DGAS_LIMIT=
     DGAS_PRICE=
     # multi sig and ws endpoints are optional
-    DEST_CHAIN_RPC_WS=
     DEST_MULTISIG=
 
     ## Note: If using multisig, leave the vairables below empty (they will be set later)
@@ -184,5 +182,5 @@ Note we have already deployed a Goerli <> Beresheet TestNet Bridge, use the foll
     BRIDGE_TRANSFER_FEE=
     ```
 
-2. After setting all required values, run `yarn deploy-bridge`. This command deploys all required contracts on both sides of the bridge.
+2. After setting all required values, run `yarn deploy -a`. This command deploys all required contracts on both sides of the bridge.
 3. Under the `/publish` directory there will be a newly created config file, copy this file to the `/deployments` directory.
