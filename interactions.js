@@ -86,7 +86,7 @@ exports.createERC20ViaFactory = async function (factoryAddress, tokenName, token
 
                 const ercName = await erc20Cloneable.name();
                 console.log(`${ercName} deployed at 0x${newCreatedAddress}`);
-                process.exit(1);
+                process.exit(0);
             } catch (err) {
                 console.log(err);
                 process.exit(1);
