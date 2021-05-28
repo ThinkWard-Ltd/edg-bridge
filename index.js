@@ -2,10 +2,10 @@ const commander = require('commander');
 
 const { deployBridge } = require('./cli/deploy');
 const { setupRelayer } = require('./cli/relayer');
-const { createToken, mintTokens } = require('./cli/erc20');
+const { deployMintableToken, mintTokens } = require('./cli/erc20');
 
 let program = new commander.Command();
-program.addCommand(createToken);
+program.addCommand(deployMintableToken);
 program.addCommand(mintTokens);
 program.addCommand(deployBridge);
 program.addCommand(setupRelayer);

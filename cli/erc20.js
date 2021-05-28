@@ -29,7 +29,7 @@ let deploymentConfigQueries = [
 ];
 
 
-exports.createToken = new commander.Command("createToken")
+exports.deployMintableToken = new commander.Command("deployMintableToken")
     .action(async function(args) {
 
         deploymentConfigQueries.push({name: `ercHandlerAddress`, message: `ERC20 Hanlder aadress: `});

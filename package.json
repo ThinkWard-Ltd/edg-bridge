@@ -8,7 +8,8 @@
   "scripts": {
     "setup-relayer": "./scripts/setupKeyStore.sh",
     "start-relayer": "./scripts/relayer.sh",
-    "deploy": "node index.js deployBridge"
+    "deploy": "node index.js deployBridge",
+    "deployMintableToken": "node index.js deployMintableToken"
   },
   "dependencies": {
     "@openzeppelin/contracts": "3.0.0",

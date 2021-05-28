@@ -85,30 +85,11 @@ Install [docker](https://docs.docker.com/docker-for-mac/install/) for mac
 To add a new token to the bridge, you will need a regular ERC-20 token deployed on the source chain and you will need to deploy a mintable ERC-20 token with the same name, symbol and decimal places on the destination chain. You can use the following steps to deploy the mintable token on the destination chain:
 
 1. Clone this repository and install all **dependencies** noted above
-2. Create a file called `factory` and set the following variables in it
+2. Run the command ```yarn deployMintableToken```, cli will ask you to provide data required for deployment of the mintable token.
+3. Wait for it to complete and copy the address provided from the previous command to use it in the github issue for token registration.
 
-    ```
-    RPC_URL=
-    CHAIN_ID=
-    PRIVATE_KEY=
-    FACTORY_ADDRESS= # Use appropiate dest chain factory address noted earlier
-    TOKEN_NAME=
-    TOKEN_SYMBOL=
-    TOKEN_DECIMALS=
-    MULTISIG_ADDRESS= # Use appropiate dest chain multisig address noted earlier
-    ```
-
-3. Run `set -a;. factory;set +a`
-4. Finally run
-
-    ```
-    node index.js createToken --rpcUrl $RPC_URL /--privateKey $CHAIN_ID /--factoryAddress $FACTORY_ADDRESS /--chainId $CHAIN_ID /--tokenName $TOKEN_NAME /--tokenSymbol $TOKEN_SYMBOL /--tokenDecimals $TOKEN_DECIMALS /--multiSigAddress $MULTISIG_ADDRESS
-    ```
-
-This creates a mintable token using the provided private key and afterwards transfers ownership to multisig address.  The command will return the contract address. 
 To register this new token on the deployed Goerli <> Beresheet TestNet Bridge please open an **issue here** and provide the token contract address on the source chain and the mintable token contract address on the destination chain.
 
-Note that the multisig will renounce contract ownership after registering the token.
 
 ## Become a Relayer
 
@@ -131,7 +112,7 @@ To become a relayer on the deployed Goerli <> Beresheet TestNet Bridge please op
 
 4. Run `yarn setup-relayer` to create a configuration file
 
-    **Note:** If the scripts fail to run due to permission errors, please provide execution permission to all the files in the scripts folder.
+    **Note:** If the scripts fail to run due to permission errors, please provide execution permission to all the files in the scripts folder using ```chmod +x *.sh```.
 
 ### Start Relayer / Relayer Service
 
