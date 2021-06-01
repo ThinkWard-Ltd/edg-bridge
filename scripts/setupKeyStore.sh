@@ -1,5 +1,9 @@
 #!/bin/bash
 set -a; . ./env/relayer.env; set +a;
+
+if test -f "./deployments/$BRIDGE.json"; then
+    cp ./deployments/$BRIDGE.json ./relayer/config.json
+fi
 cd ./relayer;
 make build;
 
