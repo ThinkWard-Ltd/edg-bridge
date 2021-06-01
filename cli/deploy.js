@@ -7,7 +7,7 @@ const { setCloneableCoinAddress, revokeGrantERC20Role, renounceBridgeAdmin } = r
 
 require('dotenv').config({ path: path.join(__dirname, '../env/deploy.env') });
 
-async function deployBridge(chainRpcUrl, chainName, privateKey, ethChainId, cbChainId, multiSigAddr, bridgeTransferFee, gasPrice, gasLimit) {
+async function deployBridge(chainRpcUrl, chainName, publicKey, privateKey, ethChainId, cbChainId, multiSigAddr, bridgeTransferFee, gasPrice, gasLimit) {
     let { chainProvider, chainWallet } = getWalletAndProvider(chainRpcUrl, privateKey, ethChainId);
 
     // No Relayers on deployment
@@ -18,10 +18,10 @@ async function deployBridge(chainRpcUrl, chainName, privateKey, ethChainId, cbCh
     const cloneableMintableERC20Address = await deployCloneableERC20(chainWallet, gasPrice, gasLimit);
 
     await setCloneableCoinAddress(mintableCoinFactoryAddress, cloneableMintableERC20Address, chainProvider, chainWallet);
-    await revokeGrantERC20Role(cloneableMintableERC20Address, 1, true, process.env.SRC_ADDRESS, chainProvider, chainWallet);
-    await revokeGrantERC20Role(cloneableMintableERC20Address, 2, true, process.env.SRC_ADDRESS, chainProvider, chainWallet);
+    await revokeGrantERC20Role(cloneableMintableERC20Address, 1, true, publicKey, chainProvider, chainWallet);
+    await revokeGrantERC20Role(cloneableMintableERC20Address, 2, true, publicKey, chainProvider, chainWallet);
     await revokeGrantERC20Role(cloneableMintableERC20Address, 0, false, mintableCoinFactoryAddress, chainProvider, chainWallet);
-    await revokeGrantERC20Role(cloneableMintableERC20Address, 0, true, process.env.SRC_ADDRESS, chainProvider, chainWallet);
+    await revokeGrantERC20Role(cloneableMintableERC20Address, 0, true, publicKey, chainProvider, chainWallet);
 
     if (multiSigAddr.length) {
         await renounceBridgeAdmin(bridgeAddress, chainWallet, chainProvider, multiSigAddr, chainName)
@@ -52,7 +52,8 @@ exports.deployBridge = new commander.Command("deployBridge")
             if (args.source || args.all) {
                 chains.push(await deployBridge(
                     process.env.SRC_CHAIN_RPC_HTTPS,
-                    process.env.SRC_CHAIN_NAME, 
+                    process.env.SRC_CHAIN_NAME,
+                    process.env.SRC_ADDRESS,
                     process.env.SRC_CHAIN_PRIVATE_KEY,
                     Number(process.env.SRC_CHAIN_NETWORK_ID), 0,
                     process.env.SRC_MULTISIG,
@@ -65,6 +66,7 @@ exports.deployBridge = new commander.Command("deployBridge")
                 chains.push(await deployBridge(
                     process.env.DEST_CHAIN_RPC_HTTPS,
                     process.env.DEST_CHAIN_NAME, 
+                    process.env.DEST_ADDRESS,
                     process.env.DEST_CHAIN_PRIVATE_KEY,
                     Number(process.env.DEST_CHAIN_NETWORK_ID), 1,
                     process.env.DEST_MULTISIG,

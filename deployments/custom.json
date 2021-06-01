@@ -23,14 +23,14 @@
             "type": "ethereum",
             "name": "BeresheetLocal",
             "opts": {
-                "bridge": "0x73b647cbA2FE75Ba05B8e12ef8F8D6327D6367bF",
-                "erc20Handler": "0x7d73424a8256C0b2BA245e5d5a3De8820E45F390",
-                "genericHandler": "0x7d73424a8256C0b2BA245e5d5a3De8820E45F390",
+                "bridge": "0x90Ad5B4E8b69D0aB05bcA46FcD25aa0Cc0152b9c",
+                "erc20Handler": "0xe76fda0E99321D90ef1e9829878b6D63427f3c1b",
+                "genericHandler": "0xe76fda0E99321D90ef1e9829878b6D63427f3c1b",
                 "gasLimit": "8000000",
                 "maxGasPrice": "100000000",
                 "http": "true"
             },
-            "erc20factory": "0x08425D9Df219f93d5763c3e85204cb5B4cE33aAa"
+            "erc20factory": "0x1Fa400004472c6712B6D856a95090b8a48687838"
         }
     ]
 }
