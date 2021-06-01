@@ -6,7 +6,7 @@
   "author": "Saad Ahmed Siddiqui",
   "license": "MIT",
   "scripts": {
-    "setup-relayer": "./scripts/setupKeyStore.sh",
+    "setup-relayer": "node index.js setupRelayer && ./scripts/setupKeyStore.sh",
     "start-relayer": "./scripts/relayer.sh",
     "deploy": "node index.js deployBridge",
     "deployMintableToken": "node index.js deployMintableToken"
