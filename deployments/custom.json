@@ -1,7 +1,7 @@
 {
     "chains": [
         {
-            "endpoint": "http://3.238.192.68:5337",
+            "endpoint": "",
             "from": "",
             "id": "0",
             "type": "ethereum",
@@ -17,20 +17,20 @@
             "erc20factory": "0x30AB903d989BBFaa9a9D4E5994CA88f76d686915"
         },
         {
-            "endpoint": "http://3.235.188.119:9933",
+            "endpoint": "https://poder.dtrade.org",
             "from": "",
-            "id": "1",
+            "id": 1,
             "type": "ethereum",
-            "name": "BeresheetLocal",
+            "name": "Geth2",
             "opts": {
-                "bridge": "0x90Ad5B4E8b69D0aB05bcA46FcD25aa0Cc0152b9c",
-                "erc20Handler": "0xe76fda0E99321D90ef1e9829878b6D63427f3c1b",
-                "genericHandler": "0xe76fda0E99321D90ef1e9829878b6D63427f3c1b",
+                "bridge": "0xf9aCCbDeEE700704A6D56Bef3c0f51dC480Ee448",
+                "erc20Handler": "0x9692192C0195e26225479D6fA9E59BEbB9C640cB",
+                "genericHandler": "0x9692192C0195e26225479D6fA9E59BEbB9C640cB",
                 "gasLimit": "8000000",
                 "maxGasPrice": "100000000",
                 "http": "true"
             },
-            "erc20factory": "0x1Fa400004472c6712B6D856a95090b8a48687838"
+            "erc20factory": "0xDec0189cabB9e9C3125d669B0491185d5e345dAf"
         }
     ]
 }
