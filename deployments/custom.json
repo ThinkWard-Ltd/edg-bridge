@@ -17,20 +17,20 @@
             "erc20factory": "0x30AB903d989BBFaa9a9D4E5994CA88f76d686915"
         },
         {
-            "endpoint": "https://poder.dtrade.org",
+            "endpoint": "http://3.80.112.7/",
             "from": "",
             "id": 1,
             "type": "ethereum",
-            "name": "Geth2",
+            "name": "Edgeware",
             "opts": {
-                "bridge": "0xf9aCCbDeEE700704A6D56Bef3c0f51dC480Ee448",
-                "erc20Handler": "0x9692192C0195e26225479D6fA9E59BEbB9C640cB",
-                "genericHandler": "0x9692192C0195e26225479D6fA9E59BEbB9C640cB",
+                "bridge": "0x6E05f58eEddA592f34DD9105b1827f252c509De0",
+                "erc20Handler": "0x79EaFd0B5eC8D3f945E6BB2817ed90b046c0d0Af",
+                "genericHandler": "0x79EaFd0B5eC8D3f945E6BB2817ed90b046c0d0Af",
                 "gasLimit": "8000000",
                 "maxGasPrice": "100000000",
                 "http": "true"
             },
-            "erc20factory": "0xDec0189cabB9e9C3125d669B0491185d5e345dAf"
+            "erc20factory": "0x2Ce636d6240f8955d085a896e12429f8B3c7db26"
         }
     ]
 }
