@@ -17,17 +17,17 @@
             "erc20factory": "0x30AB903d989BBFaa9a9D4E5994CA88f76d686915"
         },
         {
-            "endpoint": "http://3.80.112.7/",
+            "endpoint": "http://3.80.112.7:9500/",
             "from": "",
             "id": 1,
             "type": "ethereum",
             "name": "Edgeware",
             "opts": {
-                "bridge": "0x6E05f58eEddA592f34DD9105b1827f252c509De0",
-                "erc20Handler": "0x79EaFd0B5eC8D3f945E6BB2817ed90b046c0d0Af",
-                "genericHandler": "0x79EaFd0B5eC8D3f945E6BB2817ed90b046c0d0Af",
-                "gasLimit": "8000000",
-                "maxGasPrice": "100000000",
+                "bridge": "0xFcFE96117BBb1B4233f3aBA8B1865998890C5860",
+                "erc20Handler": "0xbF8B11A1c20D241dDd01832F83fb0DCE17A84589",
+                "genericHandler": "0xbF8B11A1c20D241dDd01832F83fb0DCE17A84589",
+                "gasLimit": "4700000",
+                "maxGasPrice": "4700000",
                 "http": "true"
             },
             "erc20factory": "0x2Ce636d6240f8955d085a896e12429f8B3c7db26"
