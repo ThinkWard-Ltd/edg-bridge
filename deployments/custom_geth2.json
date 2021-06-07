@@ -17,7 +17,7 @@
             "erc20factory": "0x30AB903d989BBFaa9a9D4E5994CA88f76d686915"
         },
         {
-            "endpoint": "http://3.80.112.7:9500/",
+            "endpoint": "",
             "from": "",
             "id": 1,
             "type": "ethereum",
