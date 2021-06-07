@@ -1,0 +1,36 @@
+{
+    "chains": [
+        {
+            "endpoint": "",
+            "from": "",
+            "id": "0",
+            "type": "ethereum",
+            "name": "Geth",
+            "opts": {
+                "bridge": "0xacA2b3B057d78f04129297A0f527708848293c4C",
+                "erc20Handler": "0x687350E064Bb23014f3EC7F8Ab7E38d2FCC84f5B",
+                "genericHandler": "0x687350E064Bb23014f3EC7F8Ab7E38d2FCC84f5B",
+                "gasLimit": "8000000",
+                "maxGasPrice": "100000000",
+                "http": "true"
+            },
+            "erc20factory": "0x30AB903d989BBFaa9a9D4E5994CA88f76d686915"
+        },
+        {
+            "endpoint": "https://balanced-poder.dtrade.org",
+            "from": "",
+            "id": 1,
+            "type": "ethereum",
+            "name": "Edgeware",
+            "opts": {
+                "bridge": "0x6E05f58eEddA592f34DD9105b1827f252c509De0",
+                "erc20Handler": "0x79EaFd0B5eC8D3f945E6BB2817ed90b046c0d0Af",
+                "genericHandler": "0x79EaFd0B5eC8D3f945E6BB2817ed90b046c0d0Af",
+                "gasLimit": "8000000",
+                "maxGasPrice": "100000000",
+                "http": "true"
+            },
+            "erc20factory": "0x2Ce636d6240f8955d085a896e12429f8B3c7db26"
+        }
+    ]
+}
